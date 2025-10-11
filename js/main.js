@@ -1038,10 +1038,10 @@ function startTypewriterAnimations() {
 
 // Timeline data (edit dates/labels)
 const timelineData = [
-  { title: 'The day our hearts connected', date: '2024-10-15', note: 'Our story started here.' },
-  { title: 'First commitment', date: '2025-01-20', note: 'Nerves, laughter, and butterflies.' },
-  { title: 'First breakup', date: '2025-05-22', note: 'We learned, healed, and chose love again.' },
-  { title: 'Final commitment', date: '2025-06-26', note: 'Together, stronger, softer.' },
+  { title: 'Love at the first sight', date: '2025-09-19', note: 'That\'s when the magic begin.' },
+  { title: 'First commitment', date: '2025-10-03', note: 'Laughter and butterflies.' },
+  { title: 'First date', date: '2025-10-04', note: 'It\'s fun!!.' },
+  { title: 'Second date', date: '2025-10-09', note: 'Working together.' },
 ];
 
 // Quotes rotation (customize freely)
