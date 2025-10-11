@@ -1,6 +1,5 @@
 // Moved from index.html
 // ======= CONFIG (edit these!) =======
-const PIN_CODE = '200125'; // required 6-digit pin
 const PLAYLIST = [
   // Add new songs or reorder existing ones here to adjust the playlist sequence.
   { id: '06-XXOTP3Gc', title: 'Shane Filan - Beautiful in White'},
@@ -1053,46 +1052,6 @@ const quotes = [
   'I choose you. And I will choose you, over and over.',
 ];
 
-// ======= Lock Screen Logic =======
-const lock = document.getElementById('lockscreen');
-const pin = document.getElementById('pin');
-const unlockBtn = document.getElementById('unlockBtn');
-const errorEl = document.getElementById('error');
-
-function wrongPin() {
-  errorEl.style.display = 'block';
-  lock.querySelector('.lock-card').animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-6px)' }, { transform: 'translateX(6px)' }, { transform: 'translateX(0)' }], { duration: 300, easing: 'ease-in-out' });
-}
-
-function unlockSite() {
-  lock.style.display = 'none';
-  startTypewriterAnimations();
-  initMusicAfterGesture();
-  reveal();
-  updateScrollTopButton();
-  if (playerEl) {
-    playerEl.style.display = 'flex';
-  }
-}
-
-function checkPin() {
-  if (pin.value === PIN_CODE) {
-    unlockSite();
-  } else {
-    wrongPin();
-    setTimeout(() => location.reload(), 1000);
-  }
-}
-
-unlockBtn.addEventListener('click', checkPin);
-pin.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') checkPin();
-});
-
-if (!lock || window.getComputedStyle(lock).display === 'none') {
-  startTypewriterAnimations();
-}
-
 // ======= YouTube background music =======
 const yt = document.getElementById('yt');
 const playerEl = document.getElementById('player');
@@ -1643,8 +1602,18 @@ window.addEventListener('resize', () => {
   }
 });
 
+startTypewriterAnimations();
 updateScrollTopButton();
 reveal();
+
+const requestAutoplayAfterGesture = () => {
+  initMusicAfterGesture();
+  window.removeEventListener('pointerdown', requestAutoplayAfterGesture);
+  window.removeEventListener('keydown', requestAutoplayAfterGesture);
+};
+
+window.addEventListener('pointerdown', requestAutoplayAfterGesture, { once: true });
+window.addEventListener('keydown', requestAutoplayAfterGesture, { once: true });
 
 // ======= Heart particles =======
 const canvas = document.getElementById('particles');
@@ -1676,7 +1645,7 @@ function drawHeart(x, y, s, a) {
   ctx.translate(x, y);
   ctx.scale(s / 16, s / 16);
   ctx.globalAlpha = a;
-  ctx.fillStyle = '#ff9ac4';
+  ctx.fillStyle = '#f5c0c7';
   ctx.beginPath();
   ctx.moveTo(0, 6);
   ctx.bezierCurveTo(0, 0, -8, -4, -8, -10);
