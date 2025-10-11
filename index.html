@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lynx's Love Story ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Sacramento&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Heart particle canvas -->
+    <canvas id="particles" aria-hidden="true"></canvas>
+
+    <!-- Lock Screen -->
+    <div id="lockscreen" role="dialog" aria-modal="true">
+      <div class="lock-card">
+        <div class="lock-title">A little secret for you 💖</div>
+        <p>Enter the 6-digit code to unlock</p>
+        <input id="pin" class="pin-input" type="password" inputmode="numeric" maxlength="6" placeholder="••••••" autocomplete="off" />
+        <div>
+          <button id="unlockBtn" class="btn" type="button">Unlock</button>
+        </div>
+        <div id="error" class="error">Wrong password! Reload and try again.</div>
+        <p style="margin-top: 10px; opacity: 0.7; font-size: 0.85rem">Hint: our special number ✨</p>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <nav>
+      <div class="container nav-inner">
+        <div class="brand" aria-label="Lynx's Love Story ❤️">
+          <span class="brand-title">Lynx's Love Story</span>
+          <span class="brand-heart" role="img" aria-hidden="true">❤️</span>
+        </div>
+        <div class="menu">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#letters">Letters</a>
+          <a href="#quotes">Quotes</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- HOME -->
+      <section id="home">
+        <div class="container hero reveal card">
+          <div>
+            <h1>
+              <span
+                class="typewriter hero-typewriter"
+                data-typewriter="Hi, Wifey"
+                data-typewriter-speed="110"
+                data-typewriter-delay="120"
+              >
+                Hi, Wifey
+              </span>
+              <span class="hero-flower" role="img" aria-label="Rose">🌹</span>
+            </h1>
+            <p>Every beat, every breath, every sunrise feels softer with you in it. This little corner of the web is just for you — a scrapbook of our story, wrapped in stardust and pink clouds. May this be our last pages, my number one</p>
+            <p style="margin-top: 12px"><strong>Scroll</strong> to wander through our memories, or <strong>Jump</strong> with the menu through our journey.</p>
+          </div>
+          <div
+            class="hero-carousel"
+            data-hero-carousel
+            aria-label="Snapshots from our love story"
+          >
+            <div class="hero-carousel__viewport">
+              <div class="hero-carousel__track" data-hero-track>
+                <figure class="hero-carousel__slide">
+                  <button
+                    type="button"
+                    class="hero-carousel__lightbox-trigger"
+                    data-hero-lightbox="images/Carousel/1.png"
+                    aria-label="View memory 1 in full size"
+                  >
+                    <img src="images/Carousel/1.png" alt="Memory 1 from our scrapbook" class="hero-carousel__image" />
+                  </button>
+                </figure>
+                <figure class="hero-carousel__slide">
+                  <button
+                    type="button"
+                    class="hero-carousel__lightbox-trigger"
+                    data-hero-lightbox="images/Carousel/2.png"
+                    aria-label="View memory 2 in full size"
+                  >
+                    <img
+                      src="images/Carousel/2.png"
+                      alt="Memory 2 from our scrapbook"
+                      class="hero-carousel__image"
+                      loading="lazy"
+                    />
+                  </button>
+                </figure>
+                <figure class="hero-carousel__slide">
+                  <button
+                    type="button"
+                    class="hero-carousel__lightbox-trigger"
+                    data-hero-lightbox="images/Carousel/3.png"
+                    aria-label="View memory 3 in full size"
+                  >
+                    <img
+                      src="images/Carousel/3.png"
+                      alt="Memory 3 from our scrapbook"
+                      class="hero-carousel__image"
+                      loading="lazy"
+                    />
+                  </button>
+                </figure>
+                <figure class="hero-carousel__slide">
+                  <button
+                    type="button"
+                    class="hero-carousel__lightbox-trigger"
+                    data-hero-lightbox="images/Carousel/4.png"
+                    aria-label="View memory 4 in full size"
+                  >
+                    <img
+                      src="images/Carousel/4.png"
+                      alt="Memory 4 from our scrapbook"
+                      class="hero-carousel__image"
+                      loading="lazy"
+                    />
+                  </button>
+                </figure>
+                <figure class="hero-carousel__slide">
+                  <button
+                    type="button"
+                    class="hero-carousel__lightbox-trigger"
+                    data-hero-lightbox="images/Carousel/5.png"
+                    aria-label="View memory 5 in full size"
+                  >
+                    <img
+                      src="images/Carousel/5.png"
+                      alt="Memory 5 from our scrapbook"
+                      class="hero-carousel__image"
+                      loading="lazy"
+                    />
+                  </button>
+                </figure>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="hero-carousel__nav hero-carousel__nav--prev"
+              data-hero-prev
+              aria-label="Show previous memory"
+            >
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button
+              type="button"
+              class="hero-carousel__nav hero-carousel__nav--next"
+              data-hero-next
+              aria-label="Show next memory"
+            >
+              <span aria-hidden="true">›</span>
+            </button>
+            <div class="hero-carousel__dots" role="tablist">
+              <button type="button" class="hero-carousel__dot is-active" data-hero-dot="0" aria-label="Show memory 1" aria-current="true"></button>
+              <button type="button" class="hero-carousel__dot" data-hero-dot="1" aria-label="Show memory 2" aria-current="false"></button>
+              <button type="button" class="hero-carousel__dot" data-hero-dot="2" aria-label="Show memory 3" aria-current="false"></button>
+              <button type="button" class="hero-carousel__dot" data-hero-dot="3" aria-label="Show memory 4" aria-current="false"></button>
+              <button type="button" class="hero-carousel__dot" data-hero-dot="4" aria-label="Show memory 5" aria-current="false"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="container card reveal">
+          <div class="about-cols">
+            <div class="about-text">
+              <h2>About Us</h2>
+              <p style="margin-top: 6px">
+                From <strong>enemies-to-lovers</strong> — our story is a quite miracle. Thank you for your patience, your laughter, and your love that made my life shine brighter. I’m grateful for you. I love you so much ♡
+              </p>
+              <br />
+            </div>
+            <div class="about-img">
+              <button
+                type="button"
+                class="about-img-trigger"
+                aria-haspopup="dialog"
+                aria-label="View our photo in full size"
+                data-full-image="images/couple.jpg"
+              >
+                <img src="images/couple.jpg" alt="Couple" class="about-img-pic" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIMELINE -->
+      <section id="timeline">
+        <div class="container card reveal">
+          <h2>Our Journey ♡</h2>
+          <div class="timeline" id="timelineList" style="margin-top: 10px"></div>
+        </div>
+      </section>
+
+      <!-- LETTERS -->
+      <section id="letters">
+        <div class="container reveal">
+          <div class="letters-shell card">
+            <div class="letters-header">
+              <h2>Letters of Our Forever</h2>
+              <p>
+                Each chapter pairs the promise of a ring with a handwritten love letter. Tap a jewel to open its matching
+                chapter and let the words wrap around you.
+              </p>
+            </div>
+            <div class="letter-gallery" id="letterGallery" role="list"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="love-lightbox" id="loveLightbox" aria-hidden="true" tabindex="-1">
+      <div class="love-lightbox__content" role="dialog" aria-modal="true" aria-labelledby="lightboxCaption">
+        <button type="button" class="love-lightbox__close" id="lightboxClose" aria-label="Close letter"></button>
+        <div class="love-lightbox__viewer">
+          <button
+            type="button"
+            class="love-lightbox__nav love-lightbox__nav--prev"
+            id="lightboxPrev"
+            aria-label="View previous letter"
+          ></button>
+          <div class="love-lightbox__stage" id="lightboxStage">
+            <img id="lightboxImage" alt="" class="love-lightbox__image" />
+          </div>
+          <button
+            type="button"
+            class="love-lightbox__nav love-lightbox__nav--next"
+            id="lightboxNext"
+            aria-label="View next letter"
+          ></button>
+        </div>
+        <div class="love-lightbox__toolbar" role="group" aria-label="Zoom controls">
+          <button type="button" id="lightboxZoomOut" class="love-lightbox__zoom" aria-label="Zoom out">−</button>
+          <button type="button" id="lightboxZoomReset" class="love-lightbox__zoom" aria-label="Reset zoom">↺</button>
+          <button type="button" id="lightboxZoomIn" class="love-lightbox__zoom" aria-label="Zoom in">＋</button>
+        </div>
+        <div class="love-lightbox__caption" id="lightboxCaption"></div>
+      </div>
+    </div>
+
+      <div class="love-lightbox love-lightbox--photo" id="heroLightbox" aria-hidden="true" tabindex="-1">
+        <div class="love-lightbox__content" role="dialog" aria-modal="true" aria-label="Full size memory photo">
+          <button type="button" class="love-lightbox__close" id="heroLightboxClose" aria-label="Close photo"></button>
+          <div class="love-lightbox__viewer">
+            <button
+              type="button"
+              class="love-lightbox__nav love-lightbox__nav--prev"
+              id="heroLightboxPrev"
+              aria-label="View previous memory"
+            ></button>
+            <div class="love-lightbox__stage" id="heroLightboxStage">
+              <img id="heroLightboxImage" alt="" class="love-lightbox__image" />
+            </div>
+            <button
+              type="button"
+              class="love-lightbox__nav love-lightbox__nav--next"
+              id="heroLightboxNext"
+              aria-label="View next memory"
+            ></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="love-lightbox love-lightbox--photo" id="aboutLightbox" aria-hidden="true" tabindex="-1">
+        <div class="love-lightbox__content" role="dialog" aria-modal="true" aria-label="Full size photo">
+          <button type="button" class="love-lightbox__close" id="aboutLightboxClose" aria-label="Close photo"></button>
+          <img id="aboutLightboxImage" alt="Our full size photo" class="love-lightbox__image" />
+        </div>
+      </div>
+
+      <!-- QUOTES -->
+      <section id="quotes">
+        <div class="container card reveal quotes">
+          <h2>Love Quotes</h2>
+          <div id="quoteBox" class="quote-box" style="margin-top: 10px">"You are my today and all of my tomorrows."</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>Crafted with ♡ — just for you. ✨</footer>
+
+    <!-- Hidden YouTube Player container (the iframe is injected by the YouTube IFrame API) -->
+    <div
+      id="yt"
+      title="Background Music"
+      aria-hidden="true"
+      style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)"
+    ></div>
+
+    <!-- Floating player control -->
+    <div class="player" id="player" style="display: none">
+      <div class="player-body">
+        <div class="player-art" aria-hidden="true">
+          <div class="player-disc"></div>
+          <div class="player-heart"></div>
+        </div>
+        <div class="player-main">
+          <span class="player-status" id="playerStatus">Paused</span>
+          <h3 class="player-title" id="playerTitle">Your love playlist</h3>
+          <div class="player-controls">
+            <button class="player-btn" id="prevTrack" type="button" aria-label="Previous track">⏮</button>
+            <button class="player-btn player-btn--primary" id="toggleMusic" type="button" aria-label="Play or pause">Play</button>
+            <button class="player-btn" id="nextTrack" type="button" aria-label="Next track">⏭</button>
+          </div>
+        </div>
+      </div>
+      <div class="player-playlist-accordion">
+        <button
+          class="player-list-toggle"
+          id="playlistToggle"
+          type="button"
+          aria-expanded="true"
+          aria-controls="playlistPanel"
+        >
+          <span class="player-list-header">Playlist</span>
+          <span class="player-list-toggle__icon" aria-hidden="true"></span>
+        </button>
+        <div class="player-playlist-panel" id="playlistPanel">
+          <ul class="player-playlist" id="playlist"></ul>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="scroll-top" id="scrollTopBtn" aria-label="Scroll back to top">
+      <span aria-hidden="true">↑</span>
+    </button>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
