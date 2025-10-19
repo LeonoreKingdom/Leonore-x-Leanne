@@ -30,15 +30,47 @@ body {
   font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(1200px 820px at 12% 12%, rgba(229, 205, 244, 0.65), transparent 60%),
-    radial-gradient(1100px 760px at 88% 18%, rgba(188, 218, 245, 0.6), transparent 60%),
-    radial-gradient(1400px 880px at 50% 100%, rgba(207, 231, 223, 0.45), transparent 70%),
-    var(--gradient-rainbow);
+    radial-gradient(65% 55% at 15% 100%, rgba(134, 203, 69, 0.95) 0%, rgba(88, 156, 39, 0.95) 62%, rgba(88, 156, 39, 0) 63%),
+    radial-gradient(70% 50% at 85% 100%, rgba(122, 198, 66, 0.95) 0%, rgba(77, 148, 35, 0.95) 60%, rgba(77, 148, 35, 0) 61%),
+    linear-gradient(180deg, #6bd5ff 0%, #6bd5ff 58%, #4fb9ff 58%, #4fb9ff 62%, #5ed844 62%, #5ed844 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #6bd5ff;
   overflow-x: hidden;
   scroll-behavior: smooth;
   cursor: url('../images/heart_cursor.svg') 8 8, auto;
   scrollbar-width: thin;
   scrollbar-color: rgba(111, 95, 151, 0.7) rgba(255, 255, 255, 0.35);
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.9) 0 42px, rgba(255, 255, 255, 0) 43px),
+    radial-gradient(circle at 60% 12%, rgba(255, 255, 255, 0.85) 0 36px, rgba(255, 255, 255, 0) 37px),
+    radial-gradient(circle at 82% 22%, rgba(255, 255, 255, 0.9) 0 30px, rgba(255, 255, 255, 0) 31px),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.12) 0,
+      rgba(255, 255, 255, 0.12) 3px,
+      rgba(255, 255, 255, 0) 3px,
+      rgba(255, 255, 255, 0) 6px
+    ),
+    repeating-linear-gradient(
+      rgba(255, 255, 255, 0.12) 0,
+      rgba(255, 255, 255, 0.12) 3px,
+      rgba(255, 255, 255, 0) 3px,
+      rgba(255, 255, 255, 0) 6px
+    );
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat, repeat;
+  background-size: auto, auto, auto, 6px 6px, 6px 6px;
+  mix-blend-mode: soft-light;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: -1;
 }
 
 body::-webkit-scrollbar {
