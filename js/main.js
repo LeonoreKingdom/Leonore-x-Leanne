@@ -170,6 +170,8 @@ const aboutLightboxCloseBtn = document.getElementById('aboutLightboxClose');
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 const playlistToggleBtn = document.getElementById('playlistToggle');
 const playlistPanelEl = document.getElementById('playlistPanel');
+const sideNavEl = document.getElementById('sideNav');
+const sideNavToggleBtn = document.getElementById('sideNavToggle');
 
 let lastLetterTrigger = null;
 let lastAboutTrigger = null;
@@ -957,6 +959,14 @@ document.addEventListener('keydown', (event) => {
 if (playlistToggleBtn) {
   playlistToggleBtn.addEventListener('click', () => {
     setPlaylistExpanded(!isPlaylistExpanded);
+  });
+}
+
+if (sideNavEl && sideNavToggleBtn) {
+  sideNavToggleBtn.addEventListener('click', () => {
+    const isCollapsed = document.body.classList.toggle('side-nav-collapsed');
+    sideNavToggleBtn.setAttribute('aria-expanded', isCollapsed ? 'false' : 'true');
+    sideNavToggleBtn.setAttribute('aria-label', isCollapsed ? 'Expand navigation' : 'Collapse navigation');
   });
 }
 
