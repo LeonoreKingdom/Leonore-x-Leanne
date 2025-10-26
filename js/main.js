@@ -172,6 +172,9 @@ const playlistToggleBtn = document.getElementById('playlistToggle');
 const playlistPanelEl = document.getElementById('playlistPanel');
 const sideNavEl = document.getElementById('sideNav');
 const sideNavToggleBtn = document.getElementById('sideNavToggle');
+const sideNavLogoEl = document.getElementById('sideNavLogo');
+const SIDE_NAV_LOGO_DEFAULT_SRC = 'images/logo.png';
+const SIDE_NAV_LOGO_COLLAPSED_SRC = 'images/logo-shrink.png';
 
 let lastLetterTrigger = null;
 let lastAboutTrigger = null;
@@ -962,13 +965,27 @@ if (playlistToggleBtn) {
   });
 }
 
+const updateSideNavState = (isCollapsed) => {
+  if (sideNavToggleBtn) {
+    sideNavToggleBtn.setAttribute('aria-expanded', isCollapsed ? 'false' : 'true');
+    sideNavToggleBtn.setAttribute('aria-label', isCollapsed ? 'Expand navigation' : 'Collapse navigation');
+  }
+  if (sideNavLogoEl) {
+    const nextSrc = isCollapsed ? SIDE_NAV_LOGO_COLLAPSED_SRC : SIDE_NAV_LOGO_DEFAULT_SRC;
+    if (sideNavLogoEl.getAttribute('src') !== nextSrc) {
+      sideNavLogoEl.setAttribute('src', nextSrc);
+    }
+  }
+};
+
 if (sideNavEl && sideNavToggleBtn) {
   sideNavToggleBtn.addEventListener('click', () => {
     const isCollapsed = document.body.classList.toggle('side-nav-collapsed');
-    sideNavToggleBtn.setAttribute('aria-expanded', isCollapsed ? 'false' : 'true');
-    sideNavToggleBtn.setAttribute('aria-label', isCollapsed ? 'Expand navigation' : 'Collapse navigation');
+    updateSideNavState(isCollapsed);
   });
 }
+
+updateSideNavState(document.body.classList.contains('side-nav-collapsed'));
 
 updateLightboxNavButtons();
 
