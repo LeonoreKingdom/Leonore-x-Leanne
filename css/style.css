@@ -313,14 +313,13 @@ section::before {
   left: clamp(12px, 4vw, 48px);
   right: clamp(12px, 4vw, 48px);
   border-radius: clamp(28px, 7vw, 60px);
-  background: rgba(255, 255, 255, 0.58);
-  backdrop-filter: blur(6px);
-  box-shadow: 0 30px 70px rgba(255, 143, 182, 0.15);
-  transition: background 0.3s ease;
+  background: rgba(255, 255, 255, 0.32);
+  box-shadow: 0 30px 70px rgba(255, 143, 182, 0.08);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 section:nth-of-type(even)::before {
-  background: rgba(255, 205, 224, 0.45);
+  background: rgba(255, 205, 224, 0.26);
 }
 
 @media (max-width: 768px) {
@@ -337,12 +336,11 @@ section:nth-of-type(even)::before {
   }
 }
 .card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.42));
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 24px;
   padding: 28px;
-  box-shadow: 0 12px 34px var(--shadow-soft);
-  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 34px rgba(111, 95, 151, 0.12);
 }
 h1 {
   font-family: 'Sacramento', cursive;
@@ -512,8 +510,7 @@ p {
   gap: 8px;
   padding: 6px 12px;
   border-radius: 999px;
-  background: rgba(70, 98, 125, 0.28);
-  backdrop-filter: blur(8px);
+  background: rgba(70, 98, 125, 0.18);
 }
 
 .hero-carousel__dot {
@@ -535,10 +532,6 @@ p {
 
 .hero-carousel--reduced .hero-carousel__track {
   transition: none;
-}
-
-.hero-carousel--reduced .hero-carousel__dots {
-  backdrop-filter: blur(4px);
 }
 
 @media (max-width: 600px) {
@@ -686,14 +679,13 @@ p {
 }
 /* Letters */
 .letters-shell {
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.94), rgba(229, 205, 244, 0.78) 45%, rgba(207, 231, 223, 0.74) 100%);
+  background: rgba(255, 255, 255, 0.28);
   padding: clamp(26px, 4vw, 48px);
   display: flex;
   flex-direction: column;
   gap: clamp(24px, 4vw, 40px);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  box-shadow: 0 18px 46px var(--shadow-rose);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 18px 46px rgba(197, 150, 177, 0.12);
 }
 
 .letters-header {
@@ -744,9 +736,9 @@ p {
   border-radius: 24px;
   padding: 24px 20px 28px;
   text-align: center;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(188, 218, 245, 0.78) 55%, rgba(245, 192, 199, 0.78) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.82);
-  box-shadow: 0 18px 36px rgba(92, 133, 176, 0.18);
+  background: rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  box-shadow: 0 18px 36px rgba(92, 133, 176, 0.12);
   transition: transform 0.25s ease, box-shadow 0.25s ease, outline 0.25s ease;
   cursor: pointer;
 }
@@ -845,8 +837,7 @@ p {
 .love-lightbox {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at top, rgba(229, 205, 244, 0.5), rgba(188, 218, 245, 0.55));
-  backdrop-filter: blur(10px);
+  background: rgba(229, 205, 244, 0.32);
   display: none;
   align-items: center;
   justify-content: center;
@@ -1240,10 +1231,9 @@ p {
   width: 100%;
   padding: 20px;
   border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 240, 247, 0.72));
-  box-shadow: 0 16px 40px rgba(92, 133, 176, 0.18);
-  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 16px 40px rgba(92, 133, 176, 0.12);
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
