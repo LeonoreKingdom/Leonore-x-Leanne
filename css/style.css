@@ -29,13 +29,24 @@ body {
   margin: 0;
   font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(65% 55% at 15% 100%, rgba(134, 203, 69, 0.95) 0%, rgba(88, 156, 39, 0.95) 62%, rgba(88, 156, 39, 0) 63%),
-    radial-gradient(70% 50% at 85% 100%, rgba(122, 198, 66, 0.95) 0%, rgba(77, 148, 35, 0.95) 60%, rgba(77, 148, 35, 0) 61%),
-    linear-gradient(180deg, #6bd5ff 0%, #6bd5ff 58%, #4fb9ff 58%, #4fb9ff 62%, #5ed844 62%, #5ed844 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #6bd5ff;
+  background-color: #fff6fb;
+  background-image:
+    conic-gradient(
+      from 90deg,
+      rgba(255, 204, 219, 0.85) 90deg,
+      rgba(255, 255, 255, 0.92) 90deg 180deg,
+      rgba(255, 204, 219, 0.85) 180deg 270deg,
+      rgba(255, 255, 255, 0.92) 270deg
+    ),
+    conic-gradient(
+      from 90deg,
+      rgba(255, 204, 219, 0.85) 90deg,
+      rgba(255, 255, 255, 0.92) 90deg 180deg,
+      rgba(255, 204, 219, 0.85) 180deg 270deg,
+      rgba(255, 255, 255, 0.92) 270deg
+    );
+  background-position: 0 0, 80px 80px;
+  background-size: 160px 160px;
   overflow-x: hidden;
   scroll-behavior: smooth;
   cursor: url('../images/heart_cursor.svg') 8 8, auto;
@@ -49,26 +60,13 @@ body::before {
   position: fixed;
   inset: 0;
   background-image:
-    radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.9) 0 42px, rgba(255, 255, 255, 0) 43px),
-    radial-gradient(circle at 60% 12%, rgba(255, 255, 255, 0.85) 0 36px, rgba(255, 255, 255, 0) 37px),
-    radial-gradient(circle at 82% 22%, rgba(255, 255, 255, 0.9) 0 30px, rgba(255, 255, 255, 0) 31px),
-    repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.12) 0,
-      rgba(255, 255, 255, 0.12) 3px,
-      rgba(255, 255, 255, 0) 3px,
-      rgba(255, 255, 255, 0) 6px
-    ),
-    repeating-linear-gradient(
-      rgba(255, 255, 255, 0.12) 0,
-      rgba(255, 255, 255, 0.12) 3px,
-      rgba(255, 255, 255, 0) 3px,
-      rgba(255, 255, 255, 0) 6px
-    );
-  background-repeat: no-repeat, no-repeat, no-repeat, repeat, repeat;
-  background-size: auto, auto, auto, 6px 6px, 6px 6px;
-  mix-blend-mode: soft-light;
-  opacity: 0.6;
+    radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.75) 0 120px, rgba(255, 255, 255, 0) 135px),
+    radial-gradient(circle at 80% 18%, rgba(255, 182, 213, 0.45) 0 140px, rgba(255, 182, 213, 0) 160px),
+    radial-gradient(circle at 52% 12%, rgba(255, 255, 255, 0.6) 0 110px, rgba(255, 255, 255, 0) 130px),
+    linear-gradient(120deg, rgba(255, 214, 229, 0.18), rgba(255, 255, 255, 0.15));
+  background-repeat: no-repeat;
+  mix-blend-mode: screen;
+  opacity: 0.65;
   pointer-events: none;
   z-index: -1;
 }
@@ -208,12 +206,40 @@ section {
   display: grid;
   place-items: center;
   padding: 110px 16px 64px;
+  position: relative;
+  isolation: isolate;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: clamp(40px, 10vw, 96px);
+  bottom: clamp(28px, 8vw, 80px);
+  left: clamp(12px, 4vw, 48px);
+  right: clamp(12px, 4vw, 48px);
+  border-radius: clamp(28px, 7vw, 60px);
+  background: rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 30px 70px rgba(255, 143, 182, 0.15);
+  transition: background 0.3s ease;
+}
+
+section:nth-of-type(even)::before {
+  background: rgba(255, 205, 224, 0.45);
 }
 
 @media (max-width: 768px) {
   section {
     min-height: auto;
     padding: 120px 16px 72px;
+  }
+  section::before {
+    top: clamp(28px, 12vw, 60px);
+    bottom: clamp(20px, 10vw, 54px);
+    left: clamp(8px, 6vw, 32px);
+    right: clamp(8px, 6vw, 32px);
+    border-radius: clamp(22px, 10vw, 42px);
   }
 }
 .card {
