@@ -17,6 +17,8 @@
   --shadow-strong: rgba(92, 133, 176, 0.25);
   --shadow-rose: rgba(197, 150, 177, 0.28);
   --gradient-rainbow: linear-gradient(120deg, var(--pastel-lilac), var(--pastel-blue), var(--pastel-mint), var(--pastel-lemon), var(--pastel-rose));
+  --side-nav-width: 280px;
+  --side-nav-width-collapsed: 88px;
 }
 * {
   box-sizing: border-box;
@@ -104,30 +106,10 @@ button {
   z-index: 0;
   pointer-events: none;
 }
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(10px);
-  background: linear-gradient(to bottom, rgba(229, 205, 244, 0.72), rgba(188, 218, 245, 0.35));
-  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
-  padding: 0.6rem 1rem;
-}
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 16px;
-}
-.nav-inner {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  justify-content: space-between;
 }
 .brand {
   display: inline-flex;
@@ -154,47 +136,159 @@ nav {
 .brand .typewriter {
   --typewriter-caret-color: currentColor;
 }
-.menu {
+
+.side-nav {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 1000;
+  width: var(--side-nav-width);
   display: flex;
-  gap: 18px;
-}
-.menu a {
-  text-decoration: none;
-  color: var(--text-soft);
-  font-weight: 600;
-  padding: 8px 12px;
-  border-radius: 999px;
-  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
-  white-space: nowrap;
-}
-.menu a:hover {
-  background: rgba(255, 255, 255, 0.48);
-  transform: translateY(-1px);
-  color: var(--accent-plum);
+  flex-direction: column;
+  gap: 24px;
+  padding: 28px 24px;
+  border-right: 1px solid rgba(255, 255, 255, 0.55);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.85), rgba(255, 240, 247, 0.78));
+  backdrop-filter: blur(18px);
+  box-shadow: 12px 0 40px rgba(111, 95, 151, 0.12);
+  transition: width 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (max-width: 720px) {
-  nav {
-    padding: 0.7rem 1.2rem;
+.side-nav__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.side-nav__toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(160deg, rgba(188, 218, 245, 0.48), rgba(245, 192, 199, 0.52));
+  color: var(--accent-plum);
+  box-shadow: 0 12px 22px rgba(92, 133, 176, 0.2);
+  cursor: url('../images/heart_cursor.svg') 8 8, pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.side-nav__toggle:hover {
+  transform: translateX(2px);
+  box-shadow: 0 14px 28px rgba(92, 133, 176, 0.28);
+}
+
+.side-nav__toggle:focus-visible {
+  outline: 3px solid rgba(111, 95, 151, 0.65);
+  outline-offset: 3px;
+}
+
+.side-nav__toggle-icon {
+  display: inline-block;
+  font-size: 1.3rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.side-nav__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.side-nav__menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-soft);
+  padding: 12px 16px;
+  border-radius: 16px;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.side-nav__menu a:hover,
+.side-nav__menu a:focus-visible {
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--accent-plum);
+  transform: translateX(3px);
+  outline: none;
+}
+
+.side-nav__icon {
+  font-size: 1.1rem;
+}
+
+.side-nav__label {
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.side-nav__spacer {
+  flex: 1;
+}
+
+.side-nav__playlist {
+  margin-top: auto;
+}
+
+.page-content {
+  margin-left: var(--side-nav-width);
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content main {
+  flex: 1;
+}
+
+body.side-nav-collapsed .side-nav {
+  width: var(--side-nav-width-collapsed);
+  padding: 24px 16px;
+  box-shadow: 10px 0 30px rgba(111, 95, 151, 0.12);
+}
+
+body.side-nav-collapsed .page-content {
+  margin-left: var(--side-nav-width-collapsed);
+}
+
+body.side-nav-collapsed .brand-title {
+  display: none;
+}
+
+body.side-nav-collapsed .side-nav__playlist {
+  display: none;
+}
+
+body.side-nav-collapsed .side-nav__menu a {
+  justify-content: center;
+  padding: 12px;
+}
+
+body.side-nav-collapsed .side-nav__label {
+  display: none;
+}
+
+body.side-nav-collapsed .side-nav__toggle-icon {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 820px) {
+  :root {
+    --side-nav-width: 240px;
   }
-  .nav-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+  .side-nav {
+    padding: 24px 20px;
   }
-  .brand {
-    font-size: 1.8rem;
-  }
-  .menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    gap: 12px;
-  }
-  .menu a {
-    flex: 1 1 calc(50% - 12px);
-    text-align: center;
-    padding: 8px 0;
+}
+
+@media (max-width: 640px) {
+  body.side-nav-collapsed .side-nav {
+    width: 72px;
   }
 }
 main {
@@ -1140,28 +1234,23 @@ p {
   }
 }
 .player {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  z-index: 1200;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  width: min(340px, calc(100% - 36px));
-  padding: 18px;
+  gap: 16px;
+  width: 100%;
+  padding: 20px;
   border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  background: linear-gradient(165deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.62));
-  box-shadow: 0 18px 48px var(--shadow-strong);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 240, 247, 0.72));
+  box-shadow: 0 16px 40px rgba(92, 133, 176, 0.18);
   backdrop-filter: blur(16px);
-  opacity: 0.68;
-  transition: opacity 0.25s ease, box-shadow 0.25s ease;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .player:hover,
 .player:focus-within {
-  opacity: 1;
-  box-shadow: 0 20px 52px rgba(92, 133, 176, 0.35);
+  box-shadow: 0 20px 52px rgba(92, 133, 176, 0.28);
+  transform: translateY(-2px);
 }
 
 .player-body {
@@ -1434,15 +1523,6 @@ p {
 
 .player .player-disc {
   animation-play-state: paused;
-}
-
-@media (max-width: 600px) {
-  .player {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    width: calc(100% - 40px);
-  }
 }
 
 @keyframes spin-vinyl {

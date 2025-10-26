@@ -13,24 +13,84 @@
     <!-- Heart particle canvas -->
     <canvas id="particles" aria-hidden="true"></canvas>
 
-    <!-- Nav -->
-    <nav>
-      <div class="container nav-inner">
+    <!-- Side navigation -->
+    <aside class="side-nav" id="sideNav">
+      <div class="side-nav__header">
         <div class="brand" aria-label="Leonore x Leanne Corner ❤️">
           <span class="brand-title">Leonore x Leanne Corner</span>
           <span class="brand-heart" role="img" aria-hidden="true">❤️</span>
         </div>
-        <div class="menu">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#timeline">Timeline</a>
-          <a href="#letters">Letters</a>
-          <a href="#quotes">Quotes</a>
+        <button
+          class="side-nav__toggle"
+          id="sideNavToggle"
+          type="button"
+          aria-label="Collapse navigation"
+          aria-expanded="true"
+        >
+          <span class="side-nav__toggle-icon" aria-hidden="true">❮</span>
+        </button>
+      </div>
+      <nav class="side-nav__menu" aria-label="Main">
+        <a href="#home" aria-label="Home">
+          <span class="side-nav__icon" aria-hidden="true">🏠</span>
+          <span class="side-nav__label">Home</span>
+        </a>
+        <a href="#about" aria-label="About">
+          <span class="side-nav__icon" aria-hidden="true">💞</span>
+          <span class="side-nav__label">About</span>
+        </a>
+        <a href="#timeline" aria-label="Timeline">
+          <span class="side-nav__icon" aria-hidden="true">🕰️</span>
+          <span class="side-nav__label">Timeline</span>
+        </a>
+        <a href="#letters" aria-label="Letters">
+          <span class="side-nav__icon" aria-hidden="true">💌</span>
+          <span class="side-nav__label">Letters</span>
+        </a>
+        <a href="#quotes" aria-label="Quotes">
+          <span class="side-nav__icon" aria-hidden="true">✨</span>
+          <span class="side-nav__label">Quotes</span>
+        </a>
+      </nav>
+      <div class="side-nav__spacer" aria-hidden="true"></div>
+      <div class="side-nav__playlist">
+        <div class="player" id="player">
+          <div class="player-body">
+            <div class="player-art" aria-hidden="true">
+              <div class="player-disc"></div>
+              <div class="player-heart"></div>
+            </div>
+            <div class="player-main">
+              <span class="player-status" id="playerStatus">Paused</span>
+              <h3 class="player-title" id="playerTitle">Your love playlist</h3>
+              <div class="player-controls">
+                <button class="player-btn" id="prevTrack" type="button" aria-label="Previous track">⏮</button>
+                <button class="player-btn player-btn--primary" id="toggleMusic" type="button" aria-label="Play or pause">Play</button>
+                <button class="player-btn" id="nextTrack" type="button" aria-label="Next track">⏭</button>
+              </div>
+            </div>
+          </div>
+          <div class="player-playlist-accordion">
+            <button
+              class="player-list-toggle"
+              id="playlistToggle"
+              type="button"
+              aria-expanded="true"
+              aria-controls="playlistPanel"
+            >
+              <span class="player-list-header">Playlist</span>
+              <span class="player-list-toggle__icon" aria-hidden="true"></span>
+            </button>
+            <div class="player-playlist-panel" id="playlistPanel">
+              <ul class="player-playlist" id="playlist"></ul>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
+    </aside>
 
-    <main>
+    <div class="page-content">
+      <main>
       <!-- HOME -->
       <section id="home">
         <div class="container hero reveal card">
@@ -271,9 +331,10 @@
           <div id="quoteBox" class="quote-box" style="margin-top: 10px">"You are my today and all of my tomorrows."</div>
         </div>
       </section>
-    </main>
+      </main>
 
-    <footer>Crafted with ♡ — just for you. ✨</footer>
+      <footer>Crafted with ♡ — just for you. ✨</footer>
+    </div>
 
     <!-- Hidden YouTube Player container (the iframe is injected by the YouTube IFrame API) -->
     <div
@@ -282,40 +343,6 @@
       aria-hidden="true"
       style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)"
     ></div>
-
-    <!-- Floating player control -->
-    <div class="player" id="player">
-      <div class="player-body">
-        <div class="player-art" aria-hidden="true">
-          <div class="player-disc"></div>
-          <div class="player-heart"></div>
-        </div>
-        <div class="player-main">
-          <span class="player-status" id="playerStatus">Paused</span>
-          <h3 class="player-title" id="playerTitle">Your love playlist</h3>
-          <div class="player-controls">
-            <button class="player-btn" id="prevTrack" type="button" aria-label="Previous track">⏮</button>
-            <button class="player-btn player-btn--primary" id="toggleMusic" type="button" aria-label="Play or pause">Play</button>
-            <button class="player-btn" id="nextTrack" type="button" aria-label="Next track">⏭</button>
-          </div>
-        </div>
-      </div>
-      <div class="player-playlist-accordion">
-        <button
-          class="player-list-toggle"
-          id="playlistToggle"
-          type="button"
-          aria-expanded="true"
-          aria-controls="playlistPanel"
-        >
-          <span class="player-list-header">Playlist</span>
-          <span class="player-list-toggle__icon" aria-hidden="true"></span>
-        </button>
-        <div class="player-playlist-panel" id="playlistPanel">
-          <ul class="player-playlist" id="playlist"></ul>
-        </div>
-      </div>
-    </div>
 
     <button type="button" class="scroll-top" id="scrollTopBtn" aria-label="Scroll back to top">
       <span aria-hidden="true">↑</span>
