@@ -34,119 +34,233 @@ const PLAYLIST = [
 const loveLetters = [
   {
     ring: 'images/Ring/ring_01-ayodance-sugar.png',
-    letter: 'images/LP Love Letter ♡/Chapter 0 - Sugar - 20.01.2025.jpg',
+    letter: 'images/LP Love Letter ♡/Chapter 0 - Sugar - 13.10.2025.jpg',
     chapter: 'Chapter 0',
     flavor: 'Sugar',
-    date: '20.01.2025',
+    date: '13.10.2025',
   },
   {
     ring: 'images/Ring/ring_02-ayodance-sweet.png',
-    letter: 'images/LP Love Letter ♡/Chapter 1 - Sweet - 20.01.2025.jpg',
+    letter: 'images/LP Love Letter ♡/Chapter 1 - Sweet - 14.10.2025.jpg',
     chapter: 'Chapter 1',
     flavor: 'Sweet',
-    date: '20.01.2025',
+    date: '14.10.2025',
   },
   {
     ring: 'images/Ring/ring_03-ayodance-candy.png',
-    letter: 'images/LP Love Letter ♡/Chapter 2 - Candy - 21.01.2025.jpg',
+    letter: 'images/LP Love Letter ♡/Chapter 2 - Candy - 14.10.2025.jpg',
     chapter: 'Chapter 2',
     flavor: 'Candy',
-    date: '21.01.2025',
+    date: '14.10.2025',
   },
   {
     ring: 'images/Ring/ring_04-ayodance-cherry.png',
-    letter: 'images/LP Love Letter ♡/Chapter 3 - Cherry - 21.01.2025.jpg',
+    letter: 'images/LP Love Letter ♡/Chapter 3 - Cherry - 16.10.2025.jpg',
     chapter: 'Chapter 3',
     flavor: 'Cherry',
-    date: '21.01.2025',
+    date: '16.10.2025',
   },
   {
     ring: 'images/Ring/ring_05-ayodance-strawberry.png',
-    letter: 'images/LP Love Letter ♡/Chapter 4 - Strawberry - 22.01.2025.jpg',
+    letter: 'images/LP Love Letter ♡/Chapter 4 - Strawberry - 16.10.2025.jpg',
     chapter: 'Chapter 4',
     flavor: 'Strawberry',
-    date: '22.01.2025',
+    date: '16.10.2025',
   },
   {
     ring: 'images/Ring/ring_06-ayodance-honey.png',
-    letter: 'images/LP Love Letter ♡/Chapter 5 - Honey - 23.01.2025.jpg',
+    letter: 'images/LP Love Letter ♡/Chapter 5 - Honey - 18.10.2025.jpg',
     chapter: 'Chapter 5',
     flavor: 'Honey',
-    date: '23.01.2025',
+    date: '18.10.2025',
   },
   {
     ring: 'images/Ring/ring_07-ayodance-chocholate.png',
-    letter: 'images/LP Love Letter ♡/Chapter 6 - Chocolate - 24.01.2025.jpg',
+    letter: 'images/LP Love Letter ♡/Chapter 6 - Chocolate - 18.10.2025.jpg',
     chapter: 'Chapter 6',
     flavor: 'Chocolate',
-    date: '24.01.2025',
+    date: '18.10.2025',
   },
   {
     ring: 'images/Ring/ring_08-ayodance-cupcake.png',
-    letter: 'images/LP Love Letter ♡/Chapter 7 - Cupcake - 25.01.2025.jpg',
+    letter: 'images/LP Love Letter ♡/Chapter 7 - Cupcake - 23.10.2025.jpg',
     chapter: 'Chapter 7',
     flavor: 'Cupcake',
-    date: '25.01.2025',
+    date: '23.10.2025',
   },
   {
     ring: 'images/Ring/ring_09-ayodance-brownies.png',
-    letter: 'images/LP Love Letter ♡/Chapter 8 - Brownies - 30.01.2025.jpg',
+    letter: 'images/LP Love Letter ♡/Chapter 8 - Brownies - 24.10.2025.jpg',
     chapter: 'Chapter 8',
     flavor: 'Brownies',
-    date: '30.01.2025',
+    date: '24.10.2025',
   },
   {
     ring: 'images/Ring/ring_10-ayodance-tiramisu.png',
-    letter: 'images/LP Love Letter ♡/Chapter 9 - Tiramisu - 30.01.2025.jpg',
+    letter: null,
     chapter: 'Chapter 9',
     flavor: 'Tiramisu',
-    date: '30.01.2025',
+    date: 'Soon',
   },
   {
     ring: 'images/Ring/ring_11-ayodance-sakura.png',
-    letter: 'images/LP Love Letter ♡/Chapter 10 - Sakura - 01.02.2025.jpg',
+    letter: null,
     chapter: 'Chapter 10',
     flavor: 'Sakura',
-    date: '01.02.2025',
+    date: 'Soon',
   },
   {
     ring: 'images/Ring/ring_12-ayodance-roses.png',
-    letter: 'images/LP Love Letter ♡/Chapter 11 - Roses - 03.02.2025.jpg',
+    letter: null,
     chapter: 'Chapter 11',
     flavor: 'Roses',
-    date: '03.02.2025',
+    date: 'Soon',
   },
   {
     ring: 'images/Ring/ring_13-ayodance-edelweiss.png',
-    letter: 'images/LP Love Letter ♡/Chapter 12 - Edelweiss - 14.02.2025.jpg',
+    letter: null,
     chapter: 'Chapter 12',
     flavor: 'Edelweiss',
-    date: '14.02.2025',
+    date: 'Soon',
   },
   {
     ring: 'images/Ring/ring_14-ayodance-lobelia.png',
-    letter: 'images/LP Love Letter ♡/Chapter 13 - Lobelia - 21.03.2025.jpg',
+    letter: null,
     chapter: 'Chapter 13',
     flavor: 'Lobelia',
-    date: '21.03.2025',
+    date: 'Soon',
   },
   {
     ring: 'images/Ring/ring_15-ayodance-peppermint.png',
-    letter: 'images/LP Love Letter ♡/Chapter 14 - Peppermint - 22.04.2025.jpg',
+    letter: null,
     chapter: 'Chapter 14',
     flavor: 'Peppermint',
-    date: '22.04.2025',
+    date: 'Soon',
   },
   {
     ring: 'images/Ring/ring_16-ayodance-iris.png',
-    letter: 'images/LP Love Letter ♡/Chapter 15 - Iris - 29.09.2025.jpg',
+    letter: null,
     chapter: 'Chapter 15',
     flavor: 'Iris',
-    date: '29.09.2025',
+    date: 'Soon',
+  },
+  {
+    ring: 'images/Ring/ring_17-lapith.png',
+    letter: null,
+    chapter: 'Chapter 16',
+    flavor: 'Lapith',
+    date: 'Soon',
+  },
+  {
+    ring: 'images/Ring/ring_18-ayodance-marigold.png',
+    letter: null,
+    chapter: 'Chapter 17',
+    flavor: 'Marigold',
+    date: 'Soon',
+  },
+  {
+    ring: 'images/Ring/ring_19-ayodance-cleome.png',
+    letter: null,
+    chapter: 'Chapter 18',
+    flavor: 'Cleome',
+    date: 'Soon',
+  },
+  {
+    ring: 'images/Ring/ring_20-ayodance-rudbeckia.png',
+    letter: null,
+    chapter: 'Chapter 19',
+    flavor: 'Rudbeckia',
+    date: 'Soon',
+  },
+  {
+    ring: 'images/Ring/ring_21-ayodance-anemone.png',
+    letter: null,
+    chapter: 'Chapter 20',
+    flavor: 'Anemone',
+    date: 'Soon',
+  },
+  {
+    ring: 'images/Ring/ring_22-ayodance-hyacinth.png',
+    letter: null,
+    chapter: 'Chapter 21',
+    flavor: 'Hyacinth',
+    date: 'Soon',
+  },
+  {
+    ring: 'images/Ring/ring_23-ayodance-ambrosia.png',
+    letter: null,
+    chapter: 'Chapter 22',
+    flavor: 'Ambrosia',
+    date: 'Soon',
+  },
+  {
+    ring: 'images/Ring/ring_24-ayodance-geranium.png',
+    letter: null,
+    chapter: 'Chapter 23',
+    flavor: 'Geranium',
+    date: 'Soon',
+  },
+  {
+    ring: 'images/Ring/ring_25-ayodance-lupine.png',
+    letter: null,
+    chapter: 'Chapter 24',
+    flavor: 'Lupine',
+    date: 'Soon',
+  },
+  {
+    ring: 'images/Ring/ring_26-ayodance-orchid.png',
+    letter: null,
+    chapter: 'Chapter 25',
+    flavor: 'Orchid',
+    date: 'Soon',
+  },
+];
+
+const galleryMemories = [
+  {
+    src: 'images/Gallery/1.png',
+    title: 'Memory 01',
+    description: 'Soft smiles in our cozy corner',
+  },
+  {
+    src: 'images/Gallery/2.png',
+    title: 'Memory 02',
+    description: 'You, me, and pastel skies',
+  },
+  {
+    src: 'images/Gallery/3.png',
+    title: 'Memory 03',
+    description: 'A candid that feels like sunshine',
+  },
+  {
+    src: 'images/Gallery/4.png',
+    title: 'Memory 04',
+    description: 'Holding each other a little closer',
+  },
+  {
+    src: 'images/Gallery/5.png',
+    title: 'Memory 05',
+    description: 'Our laughter caught mid-sparkle',
+  },
+  {
+    src: 'images/Gallery/6.jpg',
+    title: 'Memory 06',
+    description: 'Sweet treats and sweeter company',
+  },
+  {
+    src: 'images/Gallery/7.jpg',
+    title: 'Memory 07',
+    description: 'A gentle hug at golden hour',
+  },
+  {
+    src: 'images/Gallery/8.jpg',
+    title: 'Memory 08',
+    description: 'Dreamy lights and daydream eyes',
   },
 ];
 
 const letterGalleryEl = document.getElementById('letterGallery');
+const galleryGridEl = document.getElementById('galleryGrid');
 const heroCarouselEl = document.querySelector('[data-hero-carousel]');
 const loveLightboxEl = document.getElementById('loveLightbox');
 const lightboxImageEl = document.getElementById('lightboxImage');
@@ -163,10 +277,6 @@ const heroLightboxImageEl = document.getElementById('heroLightboxImage');
 const heroLightboxCloseBtn = document.getElementById('heroLightboxClose');
 const heroLightboxPrevBtn = document.getElementById('heroLightboxPrev');
 const heroLightboxNextBtn = document.getElementById('heroLightboxNext');
-const aboutImageTriggers = document.querySelectorAll('.about-img-trigger');
-const aboutLightboxEl = document.getElementById('aboutLightbox');
-const aboutLightboxImageEl = document.getElementById('aboutLightboxImage');
-const aboutLightboxCloseBtn = document.getElementById('aboutLightboxClose');
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 const playlistToggleBtn = document.getElementById('playlistToggle');
 const playlistPanelEl = document.getElementById('playlistPanel');
@@ -176,10 +286,17 @@ const sideNavLogoEl = document.getElementById('sideNavLogo');
 const SIDE_NAV_LOGO_DEFAULT_SRC = 'images/logo.png';
 const SIDE_NAV_LOGO_COLLAPSED_SRC = 'images/logo-shrink.png';
 
-let lastLetterTrigger = null;
-let lastAboutTrigger = null;
+let lastLightboxTrigger = null;
 let lastHeroLightboxTrigger = null;
-let currentLetterIndex = -1;
+let activeLightboxCollection = 'letters';
+let currentLightboxIndex = -1;
+let letterLightboxItems = [];
+const galleryLightboxItems = galleryMemories.map((memory) => ({
+  src: memory.src,
+  alt: `${memory.title} — ${memory.description}`,
+  caption: `${memory.title} — ${memory.description}`,
+}));
+let activeLightboxItems = letterLightboxItems;
 let lightboxZoomLevel = 1;
 let lightboxPanX = 0;
 let lightboxPanY = 0;
@@ -357,9 +474,8 @@ if (heroCarouselEl) {
 
 function restoreBodyScroll() {
   const loveOpen = loveLightboxEl?.classList.contains('is-visible');
-  const aboutOpen = aboutLightboxEl?.classList.contains('is-visible');
   const heroOpen = heroLightboxEl?.classList.contains('is-visible');
-  if (!loveOpen && !aboutOpen && !heroOpen) {
+  if (!loveOpen && !heroOpen) {
     document.body.style.overflow = '';
   }
 }
@@ -369,7 +485,8 @@ function buildLetterCaption(letter) {
 }
 
 function updateLightboxNavButtons() {
-  const shouldDisable = loveLetters.length <= 1 || currentLetterIndex < 0;
+  const total = activeLightboxItems.length;
+  const shouldDisable = total <= 1 || currentLightboxIndex < 0;
   if (lightboxPrevBtn) {
     lightboxPrevBtn.disabled = shouldDisable;
     lightboxPrevBtn.setAttribute('aria-hidden', shouldDisable ? 'true' : 'false');
@@ -551,32 +668,55 @@ function toggleLightboxZoom(event) {
   }
 }
 
-function setLoveLightboxContent(index) {
-  const letter = loveLetters[index];
-  if (!letter) {
+function getLightboxItems(collectionKey) {
+  switch (collectionKey) {
+    case 'letters':
+      return letterLightboxItems;
+    case 'gallery':
+      return galleryLightboxItems;
+    default:
+      return [];
+  }
+}
+
+function setActiveLightboxCollection(collectionKey) {
+  const items = getLightboxItems(collectionKey);
+  activeLightboxCollection = collectionKey;
+  activeLightboxItems = items;
+  currentLightboxIndex = -1;
+  updateLightboxNavButtons();
+  return items.length > 0;
+}
+
+function setLightboxContent(index) {
+  const item = activeLightboxItems[index];
+  if (!item || !item.src) {
     return false;
   }
   resetLightboxZoomState();
   if (lightboxImageEl) {
-    lightboxImageEl.src = letter.letter;
-    lightboxImageEl.alt = `${buildLetterCaption(letter)} love letter`;
+    lightboxImageEl.src = item.src;
+    lightboxImageEl.alt = item.alt || item.caption || 'Captured memory';
   }
   if (lightboxCaptionEl) {
-    lightboxCaptionEl.textContent = buildLetterCaption(letter);
+    lightboxCaptionEl.textContent = item.caption || '';
   }
-  currentLetterIndex = index;
+  currentLightboxIndex = index;
   updateLightboxNavButtons();
   return true;
 }
 
-function openLoveLetter(index, trigger) {
+function openLightbox(collectionKey, index, trigger) {
   if (!loveLightboxEl) {
     return;
   }
-  if (!setLoveLightboxContent(index)) {
+  if (!setActiveLightboxCollection(collectionKey)) {
     return;
   }
-  lastLetterTrigger = trigger || null;
+  if (!setLightboxContent(index)) {
+    return;
+  }
+  lastLightboxTrigger = trigger || null;
   loveLightboxEl.classList.add('is-visible');
   loveLightboxEl.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
@@ -585,7 +725,7 @@ function openLoveLetter(index, trigger) {
   }
 }
 
-function closeLoveLetter() {
+function closeLightbox() {
   if (!loveLightboxEl) {
     return;
   }
@@ -599,60 +739,22 @@ function closeLoveLetter() {
   if (lightboxCaptionEl) {
     lightboxCaptionEl.textContent = '';
   }
-  currentLetterIndex = -1;
+  currentLightboxIndex = -1;
   updateLightboxNavButtons();
   resetLightboxZoomState();
-  if (lastLetterTrigger) {
-    lastLetterTrigger.focus();
+  if (lastLightboxTrigger) {
+    lastLightboxTrigger.focus();
   }
-  lastLetterTrigger = null;
+  lastLightboxTrigger = null;
 }
 
-function moveLoveLetter(step) {
-  if (currentLetterIndex < 0 || !loveLetters.length) {
+function moveLightbox(step) {
+  if (currentLightboxIndex < 0 || !activeLightboxItems.length) {
     return;
   }
-  const total = loveLetters.length;
-  const nextIndex = (currentLetterIndex + step + total) % total;
-  setLoveLightboxContent(nextIndex);
-}
-
-function openAboutLightbox(trigger) {
-  if (!aboutLightboxEl || !aboutLightboxImageEl) {
-    return;
-  }
-  const button = trigger instanceof HTMLElement ? trigger : null;
-  const innerImage = button ? button.querySelector('img') : null;
-  const fullSrc = button?.dataset.fullImage || innerImage?.currentSrc || innerImage?.src || '';
-  const altText = innerImage?.alt || 'Full size photo';
-  lastAboutTrigger = button;
-  if (fullSrc) {
-    aboutLightboxImageEl.src = fullSrc;
-  }
-  aboutLightboxImageEl.alt = altText;
-  aboutLightboxEl.classList.add('is-visible');
-  aboutLightboxEl.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-  if (aboutLightboxCloseBtn) {
-    aboutLightboxCloseBtn.focus();
-  }
-}
-
-function closeAboutLightbox() {
-  if (!aboutLightboxEl) {
-    return;
-  }
-  aboutLightboxEl.classList.remove('is-visible');
-  aboutLightboxEl.setAttribute('aria-hidden', 'true');
-  if (aboutLightboxImageEl) {
-    aboutLightboxImageEl.src = '';
-    aboutLightboxImageEl.alt = 'Our full size photo';
-  }
-  restoreBodyScroll();
-  if (lastAboutTrigger) {
-    lastAboutTrigger.focus();
-  }
-  lastAboutTrigger = null;
+  const total = activeLightboxItems.length;
+  const nextIndex = (currentLightboxIndex + step + total) % total;
+  setLightboxContent(nextIndex);
 }
 
 function openHeroLightbox(trigger) {
@@ -769,89 +871,151 @@ function renderLoveLetters() {
   if (!letterGalleryEl) {
     return;
   }
+  letterLightboxItems = [];
   letterGalleryEl.innerHTML = loveLetters
     .map((letter, index) => {
       const ringNumber = String(index + 1).padStart(2, '0');
       const ringLabel = `Ring ${ringNumber} — ${letter.flavor}`;
+      const hasLetter = Boolean(letter.letter);
+      const displayDate = hasLetter ? letter.date : 'Soon';
+      let lightboxIndex = -1;
+      if (hasLetter) {
+        lightboxIndex = letterLightboxItems.push({
+          src: letter.letter,
+          alt: `${ringLabel} love letter`,
+          caption: buildLetterCaption(letter),
+        }) - 1;
+      }
+      const articleClasses = `love-card${hasLetter ? '' : ' love-card--upcoming'}`;
+      const ariaLabel = hasLetter
+        ? `Open ${ringLabel} love letter`
+        : `${ringLabel} chapter coming soon`;
+      const interactiveAttributes = hasLetter
+        ? ` tabindex="0" data-lightbox-collection="letters" data-lightbox-index="${lightboxIndex}"`
+        : '';
+      const buttonMarkup = hasLetter
+        ? `
+          <button type="button" class="love-card__button" data-lightbox-collection="letters" data-lightbox-index="${lightboxIndex}" aria-haspopup="dialog">
+            Read Chapter
+          </button>
+        `
+        : '';
       return `
-        <article class="love-card" role="listitem" data-letter-index="${index}" tabindex="0" aria-label="Open ${ringLabel} love letter">
+        <article class="${articleClasses}" role="listitem" aria-label="${ariaLabel}"${interactiveAttributes}>
           <div class="love-card__ring">
             <img src="${letter.ring}" alt="${ringLabel}" loading="lazy" />
           </div>
           <div class="love-card__meta">
             <div class="love-card__title">${ringLabel}</div>
-            <div class="love-card__subtitle">${letter.chapter} • ${letter.date}</div>
+            <div class="love-card__subtitle">${letter.chapter} • ${displayDate}</div>
           </div>
-          <button type="button" class="love-card__button" data-letter-index="${index}" aria-haspopup="dialog">
-            Read Chapter
-          </button>
+          ${buttonMarkup}
         </article>
       `;
     })
     .join('');
 }
 
-function findLetterTrigger(eventTarget) {
+function renderGallery() {
+  if (!galleryGridEl) {
+    return;
+  }
+  galleryGridEl.innerHTML = galleryMemories
+    .map((memory, index) => {
+      return `
+        <button type="button" class="gallery-card" role="listitem" aria-label="Open ${memory.title} in the lightbox" data-lightbox-collection="gallery" data-lightbox-index="${index}" aria-haspopup="dialog">
+          <span class="gallery-card__media">
+            <img src="${memory.src}" alt="${memory.title} — ${memory.description}" loading="lazy" />
+          </span>
+          <span class="gallery-card__label">${memory.title}<span>${memory.description}</span></span>
+        </button>
+      `;
+    })
+    .join('');
+}
+
+function findLightboxTrigger(eventTarget) {
   if (!(eventTarget instanceof HTMLElement)) {
     return null;
   }
-  const trigger = eventTarget.closest('[data-letter-index]');
+  const trigger = eventTarget.closest('[data-lightbox-index]');
   if (!trigger) {
     return null;
   }
-  const index = Number.parseInt(trigger.dataset.letterIndex || '', 10);
-  if (Number.isNaN(index)) {
+  const index = Number.parseInt(trigger.dataset.lightboxIndex || '', 10);
+  const collection = trigger.dataset.lightboxCollection || '';
+  if (Number.isNaN(index) || !collection) {
     return null;
   }
-  return { index, trigger };
+  return { index, collection, trigger };
 }
 
 if (letterGalleryEl) {
   letterGalleryEl.addEventListener('click', (event) => {
-    const found = findLetterTrigger(event.target);
-    if (!found) {
+    const found = findLightboxTrigger(event.target);
+    if (!found || found.collection !== 'letters') {
       return;
     }
-    openLoveLetter(found.index, found.trigger);
+    openLightbox(found.collection, found.index, found.trigger);
   });
 
   letterGalleryEl.addEventListener('keydown', (event) => {
     if (event.key !== 'Enter' && event.key !== ' ') {
       return;
     }
-    const card = event.target instanceof HTMLElement ? event.target.closest('.love-card') : null;
-    if (!card) {
-      return;
-    }
-    const index = Number.parseInt(card.dataset.letterIndex || '', 10);
-    if (Number.isNaN(index)) {
+    const found = findLightboxTrigger(event.target);
+    if (!found || found.collection !== 'letters') {
       return;
     }
     event.preventDefault();
-    openLoveLetter(index, card);
+    openLightbox(found.collection, found.index, found.trigger);
+  });
+}
+
+if (galleryGridEl) {
+  galleryGridEl.addEventListener('click', (event) => {
+    const found = findLightboxTrigger(event.target);
+    if (!found || found.collection !== 'gallery') {
+      return;
+    }
+    openLightbox(found.collection, found.index, found.trigger);
+  });
+
+  galleryGridEl.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter' && event.key !== ' ') {
+      return;
+    }
+    const found = findLightboxTrigger(event.target);
+    if (!found || found.collection !== 'gallery') {
+      return;
+    }
+    event.preventDefault();
+    openLightbox(found.collection, found.index, found.trigger);
   });
 }
 
 renderLoveLetters();
+renderGallery();
+setActiveLightboxCollection('letters');
 
 if (loveLightboxEl) {
   loveLightboxEl.addEventListener('click', (event) => {
     if (event.target === loveLightboxEl) {
-      closeLoveLetter();
+      closeLightbox();
     }
   });
 }
 
 if (lightboxCloseBtn) {
-  lightboxCloseBtn.addEventListener('click', closeLoveLetter);
+  lightboxCloseBtn.addEventListener('click', closeLightbox);
 }
 
 if (lightboxPrevBtn) {
-  lightboxPrevBtn.addEventListener('click', () => moveLoveLetter(-1));
+  lightboxPrevBtn.addEventListener('click', () => moveLightbox(-1));
 }
 
 if (lightboxNextBtn) {
-  lightboxNextBtn.addEventListener('click', () => moveLoveLetter(1));
+  lightboxNextBtn.addEventListener('click', () => moveLightbox(1));
 }
 
 if (lightboxZoomInBtn) {
@@ -881,12 +1045,6 @@ if (lightboxStageEl) {
 
 updateZoomButtonState();
 
-if (aboutImageTriggers.length) {
-  aboutImageTriggers.forEach((trigger) => {
-    trigger.addEventListener('click', () => openAboutLightbox(trigger));
-  });
-}
-
 if (heroLightboxEl) {
   heroLightboxEl.addEventListener('click', (event) => {
     if (event.target === heroLightboxEl) {
@@ -907,28 +1065,12 @@ if (heroLightboxNextBtn) {
   heroLightboxNextBtn.addEventListener('click', () => moveHeroLightbox(1));
 }
 
-if (aboutLightboxEl) {
-  aboutLightboxEl.addEventListener('click', (event) => {
-    if (event.target === aboutLightboxEl) {
-      closeAboutLightbox();
-    }
-  });
-}
-
-if (aboutLightboxCloseBtn) {
-  aboutLightboxCloseBtn.addEventListener('click', closeAboutLightbox);
-}
-
 document.addEventListener('keydown', (event) => {
   const loveLightboxVisible = loveLightboxEl && loveLightboxEl.classList.contains('is-visible');
-  const aboutLightboxVisible = aboutLightboxEl && aboutLightboxEl.classList.contains('is-visible');
   const heroLightboxVisible = heroLightboxEl && heroLightboxEl.classList.contains('is-visible');
   if (event.key === 'Escape') {
     if (loveLightboxVisible) {
-      closeLoveLetter();
-    }
-    if (aboutLightboxVisible) {
-      closeAboutLightbox();
+      closeLightbox();
     }
     if (heroLightboxVisible) {
       closeHeroLightbox();
@@ -952,10 +1094,10 @@ document.addEventListener('keydown', (event) => {
   }
   if (event.key === 'ArrowRight') {
     event.preventDefault();
-    moveLoveLetter(1);
+    moveLightbox(1);
   } else if (event.key === 'ArrowLeft') {
     event.preventDefault();
-    moveLoveLetter(-1);
+    moveLightbox(-1);
   }
 });
 
