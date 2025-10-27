@@ -28,9 +28,13 @@
           <span class="side-nav__icon" aria-hidden="true">🏠</span>
           <span class="side-nav__label">Home</span>
         </a>
-        <a href="#about" aria-label="About">
-          <span class="side-nav__icon" aria-hidden="true">💞</span>
-          <span class="side-nav__label">About</span>
+        <a href="#moments" aria-label="Moments">
+          <span class="side-nav__icon" aria-hidden="true">🎞️</span>
+          <span class="side-nav__label">Moments</span>
+        </a>
+        <a href="#gallery" aria-label="Gallery">
+          <span class="side-nav__icon" aria-hidden="true">🖼️</span>
+          <span class="side-nav__label">Gallery</span>
         </a>
         <a href="#timeline" aria-label="Timeline">
           <span class="side-nav__icon" aria-hidden="true">🕰️</span>
@@ -83,22 +87,35 @@
           <img src="images/Home/home.png" alt="" />
         </section>
 
-        <!-- ABOUT -->
-        <section id="about">
+        <!-- MOMENTS -->
+        <section id="moments">
           <div class="container card reveal">
-            <div class="about-cols">
-              <div class="about-text">
-                <h2>About Us</h2>
+            <div class="moments-layout">
+              <div class="moments-text">
+                <h2>Our Moments</h2>
                 <p style="margin-top: 6px">
-                  <strong>Love at the first sight</strong> — our story is a quite miracle. Thank you for your patience, your laughter, and your love that made my life shine brighter. I’m grateful for you. I love you so much ♡
+                  Press play and relive the smiles, laughter, and quiet glances that tell our story better than any words ever could. This little film is a love letter in motion just for us. ♡
                 </p>
-                <br />
               </div>
-              <div class="about-img">
-                <button type="button" class="about-img-trigger" aria-haspopup="dialog" aria-label="View our photo in full size" data-full-image="images/couple.jpg">
-                  <img src="images/couple.jpg" alt="Couple" class="about-img-pic" />
-                </button>
+              <div class="moments-media">
+                <video class="moments-video" controls preload="metadata" playsinline>
+                  <source src="videos/hero.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="gallery">
+          <div class="container reveal">
+            <div class="gallery-shell card">
+              <div class="gallery-header">
+                <h2>Memory Gallery</h2>
+                <p>Peek through our favorite snaps — tap any frame to open it in the lightbox and wander through the memories together.</p>
+              </div>
+              <div class="gallery-grid" id="galleryGrid" role="list"></div>
             </div>
           </div>
         </section>
@@ -126,13 +143,13 @@
 
         <div class="love-lightbox" id="loveLightbox" aria-hidden="true" tabindex="-1">
           <div class="love-lightbox__content" role="dialog" aria-modal="true" aria-labelledby="lightboxCaption">
-            <button type="button" class="love-lightbox__close" id="lightboxClose" aria-label="Close letter"></button>
+            <button type="button" class="love-lightbox__close" id="lightboxClose" aria-label="Close viewer"></button>
             <div class="love-lightbox__viewer">
-              <button type="button" class="love-lightbox__nav love-lightbox__nav--prev" id="lightboxPrev" aria-label="View previous letter"></button>
+              <button type="button" class="love-lightbox__nav love-lightbox__nav--prev" id="lightboxPrev" aria-label="View previous item"></button>
               <div class="love-lightbox__stage" id="lightboxStage">
                 <img id="lightboxImage" alt="" class="love-lightbox__image" />
               </div>
-              <button type="button" class="love-lightbox__nav love-lightbox__nav--next" id="lightboxNext" aria-label="View next letter"></button>
+              <button type="button" class="love-lightbox__nav love-lightbox__nav--next" id="lightboxNext" aria-label="View next item"></button>
             </div>
             <div class="love-lightbox__toolbar" role="group" aria-label="Zoom controls">
               <button type="button" id="lightboxZoomOut" class="love-lightbox__zoom" aria-label="Zoom out">−</button>
@@ -153,13 +170,6 @@
               </div>
               <button type="button" class="love-lightbox__nav love-lightbox__nav--next" id="heroLightboxNext" aria-label="View next memory"></button>
             </div>
-          </div>
-        </div>
-
-        <div class="love-lightbox love-lightbox--photo" id="aboutLightbox" aria-hidden="true" tabindex="-1">
-          <div class="love-lightbox__content" role="dialog" aria-modal="true" aria-label="Full size photo">
-            <button type="button" class="love-lightbox__close" id="aboutLightboxClose" aria-label="Close photo"></button>
-            <img id="aboutLightboxImage" alt="Our full size photo" class="love-lightbox__image" />
           </div>
         </div>
 
