@@ -51,7 +51,7 @@ body {
   background-size: 160px 160px;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  cursor: url('../images/heart_cursor.svg') 8 8, auto;
+  cursor: url('../images/Cursor/rabbit10.ani') 8 8, url('../images/heart_cursor.svg') 8 8, auto;
   scrollbar-width: thin;
   scrollbar-color: rgba(111, 95, 151, 0.7) rgba(255, 255, 255, 0.35);
   position: relative;
@@ -79,26 +79,34 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 235, 245, 0.35));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 235, 245, 0.5));
   border-radius: 999px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  box-shadow: inset 0 0 12px rgba(111, 95, 151, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 0 14px rgba(111, 95, 151, 0.2);
 }
 
 body::-webkit-scrollbar-thumb {
-  background: linear-gradient(200deg, rgba(111, 95, 151, 0.95), rgba(92, 133, 176, 0.85));
   border-radius: 999px;
-  border: 2px solid rgba(255, 255, 255, 0.55);
-  box-shadow: 0 10px 20px rgba(92, 133, 176, 0.28);
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  background:
+    radial-gradient(circle at 18% 30%, rgba(255, 255, 255, 0.9) 0 18%, transparent 36%),
+    radial-gradient(circle at 64% 26%, rgba(255, 255, 255, 0.85) 0 14%, transparent 32%),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Cellipse%20cx%3D%2711%27%20cy%3D%2710%27%20rx%3D%273.2%27%20ry%3D%276.4%27%20fill%3D%27%2523ffffff%27/%3E%3Cellipse%20cx%3D%2721%27%20cy%3D%2710%27%20rx%3D%273.2%27%20ry%3D%276.4%27%20fill%3D%27%2523ffffff%27/%3E%3Ccircle%20cx%3D%2716%27%20cy%3D%2718%27%20r%3D%279%27%20fill%3D%27%2523ffffff%27/%3E%3Ccircle%20cx%3D%2713%27%20cy%3D%2717%27%20r%3D%271.2%27%20fill%3D%27%25236f5f97%27/%3E%3Ccircle%20cx%3D%2719%27%20cy%3D%2717%27%20r%3D%271.2%27%20fill%3D%27%25236f5f97%27/%3E%3Cpath%20d%3D%27M12%2021c1.6%202%203.2%203%204%203s2.4-1%204-3%27%20fill%3D%27none%27%20stroke%3D%27%25236f5f97%27%20stroke-width%3D%271.8%27%20stroke-linecap%3D%27round%27/%3E%3C/svg%3E") center 12px / 22px 22px no-repeat,
+    linear-gradient(210deg, rgba(188, 218, 245, 0.95), rgba(245, 192, 199, 0.92));
+  box-shadow: 0 12px 22px rgba(92, 133, 176, 0.26);
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(200deg, rgba(136, 118, 178, 1), rgba(99, 150, 187, 0.95));
+  background:
+    radial-gradient(circle at 22% 36%, rgba(255, 255, 255, 0.95) 0 18%, transparent 36%),
+    radial-gradient(circle at 70% 28%, rgba(255, 255, 255, 0.88) 0 14%, transparent 32%),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Cellipse%20cx%3D%2711%27%20cy%3D%2710%27%20rx%3D%273.2%27%20ry%3D%276.4%27%20fill%3D%27%2523ffffff%27/%3E%3Cellipse%20cx%3D%2721%27%20cy%3D%2710%27%20rx%3D%273.2%27%20ry%3D%276.4%27%20fill%3D%27%2523ffffff%27/%3E%3Ccircle%20cx%3D%2716%27%20cy%3D%2718%27%20r%3D%279%27%20fill%3D%27%2523ffffff%27/%3E%3Ccircle%20cx%3D%2713%27%20cy%3D%2717%27%20r%3D%271.2%27%20fill%3D%27%25236f5f97%27/%3E%3Ccircle%20cx%3D%2719%27%20cy%3D%2717%27%20r%3D%271.2%27%20fill%3D%27%25236f5f97%27/%3E%3Cpath%20d%3D%27M12%2021c1.6%202%203.2%203%204%203s2.4-1%204-3%27%20fill%3D%27none%27%20stroke%3D%27%25236f5f97%27%20stroke-width%3D%271.8%27%20stroke-linecap%3D%27round%27/%3E%3C/svg%3E") center 12px / 22px 22px no-repeat,
+    linear-gradient(210deg, rgba(206, 184, 236, 0.95), rgba(188, 218, 245, 0.9));
 }
 
 a,
 button {
-  cursor: url('../images/heart_cursor.svg') 8 8, pointer;
+  cursor: url('../images/Cursor/rabbit10.ani') 8 8, url('../images/heart_cursor.svg') 8 8, pointer;
 }
 #particles {
   position: fixed;
@@ -119,6 +127,11 @@ button {
   font-size: 2rem;
   color: var(--accent-plum);
   letter-spacing: 0.5px;
+}
+
+#sideNavLogo {
+  border-radius: 28px;
+  box-shadow: 0 6px 18px rgba(111, 95, 151, 0.25);
 }
 
 .brand-title {
@@ -170,7 +183,7 @@ button {
   background: linear-gradient(160deg, rgba(188, 218, 245, 0.48), rgba(245, 192, 199, 0.52));
   color: var(--accent-plum);
   box-shadow: 0 12px 22px rgba(92, 133, 176, 0.2);
-  cursor: url('../images/heart_cursor.svg') 8 8, pointer;
+  cursor: url('../images/Cursor/rabbit10.ani') 8 8, url('../images/heart_cursor.svg') 8 8, pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -655,7 +668,7 @@ p {
   border: none;
   background: none;
   text-align: left;
-  cursor: url('../images/heart_cursor.svg') 8 8, pointer;
+  cursor: url('../images/Cursor/rabbit10.ani') 8 8, url('../images/heart_cursor.svg') 8 8, pointer;
 }
 
 .gallery-card:focus-visible {
@@ -669,6 +682,8 @@ p {
   overflow: hidden;
   border-radius: 18px;
   box-shadow: 0 16px 38px rgba(92, 133, 176, 0.22);
+  aspect-ratio: 4 / 5;
+  display: flex;
 }
 
 .gallery-card__media::after {
@@ -708,43 +723,481 @@ p {
 /* Timeline */
 .timeline {
   position: relative;
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
-  padding-left: 20px;
 }
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 28px;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(180deg, var(--pastel-lilac), var(--pastel-blue), var(--pastel-mint), var(--pastel-lemon), var(--pastel-rose));
-}
-.t-item {
+
+.timeline-roadmap {
   position: relative;
-  margin: 18px 0 26px 0;
-  padding-left: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(16px, 3vw, 28px);
+  padding: 32px 32px 48px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 24px 44px rgba(111, 95, 151, 0.16);
+  backdrop-filter: blur(16px);
 }
-.t-item::before {
+
+.timeline-roadmap::before {
   content: '';
   position: absolute;
-  left: 18px;
-  top: 6px;
+  inset: 48px clamp(32px, 5vw, 60px) 72px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 0% 50%, rgba(188, 218, 245, 0.8), transparent 60%),
+    radial-gradient(circle at 100% 50%, rgba(245, 192, 199, 0.8), transparent 60%),
+    linear-gradient(90deg, rgba(188, 218, 245, 0.8), rgba(245, 192, 199, 0.8));
+  opacity: 0.4;
+  pointer-events: none;
+  mask: linear-gradient(0deg, transparent 0 26%, rgba(0, 0, 0, 0.95) 32% 68%, transparent 74%);
+}
+
+.roadmap-stop {
+  position: relative;
+  min-width: 180px;
+  flex: 1 1 200px;
+  padding: 22px 20px 26px;
+  border-radius: 24px;
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.85), rgba(255, 240, 247, 0.9));
+  border: 1px solid rgba(188, 218, 245, 0.42);
+  box-shadow: 0 20px 36px rgba(92, 133, 176, 0.2);
+  color: inherit;
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: url('../images/Cursor/rabbit10.ani') 8 8, url('../images/heart_cursor.svg') 8 8, pointer;
+}
+
+.roadmap-stop::after {
+  content: '';
+  position: absolute;
   width: 20px;
   height: 20px;
+  top: -10px;
+  left: 28px;
   border-radius: 50%;
-  background: linear-gradient(180deg, var(--pastel-mint), var(--pastel-lemon), var(--pastel-rose));
-  box-shadow: 0 4px 12px var(--shadow-rose);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0 40%, rgba(245, 192, 199, 0.8));
+  box-shadow: 0 0 0 8px rgba(188, 218, 245, 0.3), 0 18px 24px rgba(92, 133, 176, 0.22);
 }
-.t-title {
+
+.roadmap-stop.is-active {
+  transform: translateY(-6px);
+  border-color: rgba(245, 192, 199, 0.6);
+  box-shadow: 0 26px 42px rgba(111, 95, 151, 0.26);
+}
+
+.roadmap-stop:focus-visible {
+  outline: 3px solid rgba(111, 95, 151, 0.55);
+  outline-offset: 4px;
+}
+
+.roadmap-stop__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: linear-gradient(120deg, rgba(188, 218, 245, 0.9), rgba(245, 192, 199, 0.85));
+  color: var(--accent-plum);
+}
+
+.roadmap-stop__title {
+  margin-top: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-plum);
+}
+
+.roadmap-stop__date {
+  margin-top: 8px;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+}
+
+.roadmap-stop__note {
+  margin-top: 12px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.timeline-details {
+  margin-top: 26px;
+  padding: 20px 24px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0 0 0 1px rgba(188, 218, 245, 0.38);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* Games */
+.games-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.games-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.games-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.games-tabs {
+  display: inline-flex;
+  align-self: center;
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  padding: 6px;
+  box-shadow: 0 18px 34px rgba(111, 95, 151, 0.18);
+  border: 1px solid rgba(188, 218, 245, 0.4);
+}
+
+.games-tab {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 999px;
+  color: var(--text-soft);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.games-tab.is-active {
+  background: linear-gradient(140deg, rgba(188, 218, 245, 0.9), rgba(245, 192, 199, 0.9));
+  color: var(--accent-plum);
+  transform: translateY(-1px);
+}
+
+.game-panel {
+  display: none;
+  gap: 24px;
+}
+
+.game-panel.is-active {
+  display: flex;
+}
+
+.tetris-layout {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto minmax(180px, 1fr);
+  align-items: start;
+}
+
+#tetrisCanvas {
+  width: 100%;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 24px;
+  border: 1px solid rgba(188, 218, 245, 0.45);
+  box-shadow: inset 0 0 0 8px rgba(188, 218, 245, 0.18);
+}
+
+.tetris-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tetris-scoreboard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 16px 30px rgba(92, 133, 176, 0.22);
+}
+
+.tetris-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-soft);
+}
+
+.tetris-value {
+  display: block;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--accent-plum);
 }
-.t-date {
+
+.tetris-controls {
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 16px 30px rgba(245, 192, 199, 0.24);
+}
+
+.tetris-controls p {
+  margin: 0 0 10px;
+  font-weight: 600;
+  color: var(--accent-plum);
+}
+
+.tetris-controls ul {
+  margin: 0;
+  padding-left: 18px;
   font-size: 0.9rem;
-  color: var(--accent-gold);
-  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.tetris-start {
+  padding: 14px 18px;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(140deg, rgba(255, 214, 229, 0.95), rgba(188, 218, 245, 0.95));
+  font-weight: 600;
+  color: var(--accent-plum);
+  box-shadow: 0 18px 34px rgba(111, 95, 151, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tetris-start:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 36px rgba(111, 95, 151, 0.26);
+}
+
+.chess-layout {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(240px, 360px) minmax(200px, 1fr);
+  align-items: start;
+}
+
+.chess-board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 22px 40px rgba(92, 133, 176, 0.24);
+  border: 1px solid rgba(188, 218, 245, 0.45);
+}
+
+.chess-cell {
+  position: relative;
+  padding-top: 100%;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease;
+}
+
+.chess-cell span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.chess-cell.is-light {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.chess-cell.is-dark {
+  background: rgba(188, 218, 245, 0.65);
+}
+
+.chess-cell.is-highlight::after {
+  content: '';
+  position: absolute;
+  inset: 12%;
+  border-radius: 16px;
+  background: rgba(245, 192, 199, 0.45);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.chess-cell.is-move::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(111, 95, 151, 0.75);
+  box-shadow: 0 0 0 6px rgba(111, 95, 151, 0.18);
+}
+
+.chess-cell button {
+  position: absolute;
+  inset: 0;
+  border: none;
+  background: none;
+}
+
+.chess-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chess-status,
+.chess-scoreboard {
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 34px rgba(111, 95, 151, 0.2);
+}
+
+.chess-status h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: var(--accent-plum);
+}
+
+.chess-scoreboard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.chess-label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-soft);
+}
+
+.chess-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-plum);
+}
+
+.chess-restart {
+  padding: 14px 18px;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(140deg, rgba(188, 218, 245, 0.92), rgba(255, 214, 229, 0.92));
+  font-weight: 600;
+  color: var(--accent-plum);
+  box-shadow: 0 18px 34px rgba(92, 133, 176, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chess-restart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 38px rgba(92, 133, 176, 0.28);
+}
+
+@media (max-width: 860px) {
+  .tetris-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .chess-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .games-tabs {
+    flex-direction: column;
+    border-radius: 24px;
+  }
+
+  .roadmap-stop {
+    flex: 1 1 100%;
+  }
+}
+
+/* Bunny pets */
+.bunny-pets {
+  position: fixed;
+  inset: auto 0 32px 0;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 900;
+  padding-inline: clamp(32px, 6vw, 60px);
+}
+
+.bunny-pet {
+  position: relative;
+  width: clamp(60px, 12vw, 110px);
+  aspect-ratio: 1;
+  filter: drop-shadow(0 18px 24px rgba(111, 95, 151, 0.28));
+  animation: bunnyRun 18s linear infinite;
+}
+
+.bunny-pet::before,
+.bunny-pet::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.bunny-pet::before {
+  inset: 36% 12% 6% 12%;
+  background: radial-gradient(circle at 60% 32%, rgba(255, 255, 255, 0.95) 0 48%, rgba(245, 192, 199, 0.35) 55% 100%);
+  border-radius: 55% 55% 60% 60%;
+  box-shadow:
+    -18px 6px 0 -10px rgba(255, 255, 255, 0.7),
+    18px 6px 0 -10px rgba(255, 255, 255, 0.7),
+    0 0 0 10px rgba(255, 255, 255, 0.35);
+  animation: bunnyHop 1.2s ease-in-out infinite;
+}
+
+.bunny-pet::after {
+  width: 42%;
+  height: 42%;
+  top: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.95) 0 62%, rgba(245, 192, 199, 0.6) 70% 100%);
+  box-shadow:
+    -18px -28px 0 -12px rgba(255, 255, 255, 0.95),
+    18px -28px 0 -12px rgba(255, 255, 255, 0.95),
+    0 26px 0 -14px rgba(245, 192, 199, 0.6);
+  animation: bunnyHop 1.2s ease-in-out infinite;
+}
+
+.bunny-pet--right {
+  animation-delay: -6s;
+}
+
+.bunny-pet--right::before,
+.bunny-pet--right::after {
+  animation-delay: -0.6s;
+}
+
+@keyframes bunnyRun {
+  0% {
+    transform: translateX(-10%) translateY(0) scale(1);
+  }
+  20% {
+    transform: translateX(10%) translateY(-6px) scale(1.02);
+  }
+  40% {
+    transform: translateX(30%) translateY(4px) scale(0.98);
+  }
+  60% {
+    transform: translateX(60%) translateY(-4px) scale(1.04);
+  }
+  80% {
+    transform: translateX(90%) translateY(2px) scale(0.96);
+  }
+  100% {
+    transform: translateX(120%) translateY(0) scale(1);
+  }
+}
+
+@keyframes bunnyHop {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
 }
 /* Letters */
 .letters-shell {
@@ -985,7 +1438,7 @@ p {
   border: none;
   background: linear-gradient(140deg, var(--pastel-lilac), var(--pastel-rose));
   box-shadow: 0 10px 24px var(--shadow-soft);
-  cursor: url('../images/heart_cursor.svg') 8 8, pointer;
+  cursor: url('../images/Cursor/rabbit10.ani') 8 8, url('../images/heart_cursor.svg') 8 8, pointer;
 }
 
 .love-lightbox__close::before,
@@ -1034,7 +1487,7 @@ p {
   border-radius: 50%;
   background: linear-gradient(160deg, rgba(188, 218, 245, 0.95), rgba(207, 231, 223, 0.95), rgba(245, 192, 199, 0.95));
   box-shadow: 0 14px 28px var(--shadow-strong);
-  cursor: url('../images/heart_cursor.svg') 8 8, pointer;
+  cursor: url('../images/Cursor/rabbit10.ani') 8 8, url('../images/heart_cursor.svg') 8 8, pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1100,7 +1553,7 @@ p {
   display: grid;
   place-items: center;
   box-shadow: 0 12px 28px var(--shadow-strong);
-  cursor: url('../images/heart_cursor.svg') 8 8, pointer;
+  cursor: url('../images/Cursor/rabbit10.ani') 8 8, url('../images/heart_cursor.svg') 8 8, pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
@@ -1414,7 +1867,7 @@ p {
   background: rgba(255, 255, 255, 0.74);
   box-shadow: 0 6px 14px rgba(92, 133, 176, 0.16);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
-  cursor: url('../images/heart_cursor.svg') 8 8, pointer;
+  cursor: url('../images/Cursor/rabbit10.ani') 8 8, url('../images/heart_cursor.svg') 8 8, pointer;
 }
 
 .player-btn:hover {
@@ -1459,7 +1912,7 @@ p {
   border-radius: 18px;
   padding: 10px 16px;
   background: rgba(255, 255, 255, 0.56);
-  cursor: url('../images/heart_cursor.svg') 8 8, pointer;
+  cursor: url('../images/Cursor/rabbit10.ani') 8 8, url('../images/heart_cursor.svg') 8 8, pointer;
   transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 8px 18px rgba(92, 133, 176, 0.15);
 }
@@ -1551,7 +2004,7 @@ p {
   font-size: 0.85rem;
   font-family: inherit;
   text-align: left;
-  cursor: url('../images/heart_cursor.svg') 8 8, pointer;
+  cursor: url('../images/Cursor/rabbit10.ani') 8 8, url('../images/heart_cursor.svg') 8 8, pointer;
   transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 }
 
@@ -1632,7 +2085,7 @@ footer {
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   z-index: 1200;
-  cursor: url('../images/heart_cursor.svg') 8 8, pointer;
+  cursor: url('../images/Cursor/rabbit10.ani') 8 8, url('../images/heart_cursor.svg') 8 8, pointer;
 }
 
 .scroll-top::after {

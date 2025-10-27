@@ -44,6 +44,10 @@
           <span class="side-nav__icon" aria-hidden="true">💌</span>
           <span class="side-nav__label">Letters</span>
         </a>
+        <a href="#games" aria-label="Games">
+          <span class="side-nav__icon" aria-hidden="true">🎮</span>
+          <span class="side-nav__label">Games</span>
+        </a>
         <a href="#quotes" aria-label="Quotes">
           <span class="side-nav__icon" aria-hidden="true">✨</span>
           <span class="side-nav__label">Quotes</span>
@@ -98,8 +102,14 @@
                 </p>
               </div>
               <div class="moments-media">
-                <video class="moments-video" controls preload="metadata" playsinline>
-                  <source src="videos/hero.mp4" type="video/mp4" />
+                <video
+                  class="moments-video"
+                  id="momentsVideo"
+                  controls
+                  preload="none"
+                  playsinline
+                  data-src="videos/hero.mp4"
+                >
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -124,7 +134,7 @@
         <section id="timeline">
           <div class="container card reveal">
             <h2>Our Journey ♡</h2>
-            <div class="timeline" id="timelineList" style="margin-top: 10px"></div>
+            <div class="timeline" id="timelineList" style="margin-top: 18px"></div>
           </div>
         </section>
 
@@ -137,6 +147,81 @@
                 <p>Each chapter pairs the promise of a ring with a handwritten love letter. Tap a jewel to open its matching chapter and let the words wrap around you.</p>
               </div>
               <div class="letter-gallery" id="letterGallery" role="list"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- GAMES -->
+        <section id="games">
+          <div class="container reveal">
+            <div class="games-shell card">
+              <div class="games-header">
+                <h2>Playful Mini Games</h2>
+                <p>
+                  Take a break together — challenge each other at pixel hearts Tetris or a cozy chess match. Your best runs are saved locally so we can celebrate every little victory.
+                </p>
+              </div>
+              <div class="games-body">
+                <div class="games-tabs" role="tablist" aria-label="Mini game selector">
+                  <button type="button" class="games-tab is-active" data-game="tetris" role="tab" aria-selected="true" aria-controls="tetrisPanel" id="tetrisTab">
+                    🧩 Tetris Duo
+                  </button>
+                  <button type="button" class="games-tab" data-game="chess" role="tab" aria-selected="false" aria-controls="chessPanel" id="chessTab">
+                    ♟️ Chess Lounge
+                  </button>
+                </div>
+                <div class="games-panels">
+                  <div class="game-panel is-active" data-game-panel="tetris" role="tabpanel" id="tetrisPanel" aria-labelledby="tetrisTab">
+                    <div class="tetris-layout">
+                      <canvas id="tetrisCanvas" width="240" height="480" aria-label="Tetris play field"></canvas>
+                      <div class="tetris-sidebar">
+                        <div class="tetris-scoreboard">
+                          <div>
+                            <span class="tetris-label">Score</span>
+                            <span id="tetrisScore" class="tetris-value">0</span>
+                          </div>
+                          <div>
+                            <span class="tetris-label">Best</span>
+                            <span id="tetrisBest" class="tetris-value">0</span>
+                          </div>
+                        </div>
+                        <div class="tetris-controls">
+                          <p>Controls</p>
+                          <ul>
+                            <li>⬅️ / ➡️ — Move</li>
+                            <li>⬆️ — Rotate</li>
+                            <li>⬇️ — Soft drop</li>
+                            <li>Space — Hard drop</li>
+                          </ul>
+                        </div>
+                        <button type="button" class="tetris-start" id="tetrisStart">Start / Reset</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="game-panel" data-game-panel="chess" role="tabpanel" id="chessPanel" aria-labelledby="chessTab" hidden>
+                    <div class="chess-layout">
+                      <div class="chess-board" id="chessBoard" role="grid" aria-label="Casual chess board"></div>
+                      <div class="chess-sidebar">
+                        <div class="chess-status">
+                          <h3>Match Status</h3>
+                          <p id="chessStatus">Ready for a friendly duel.</p>
+                        </div>
+                        <div class="chess-scoreboard">
+                          <div>
+                            <span class="chess-label">Wins</span>
+                            <span id="chessWins" class="chess-value">0</span>
+                          </div>
+                          <div>
+                            <span class="chess-label">Losses</span>
+                            <span id="chessLosses" class="chess-value">0</span>
+                          </div>
+                        </div>
+                        <button type="button" id="chessRestart" class="chess-restart">Restart game</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -189,8 +274,13 @@
     <div id="yt" title="Background Music" aria-hidden="true" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)"></div>
 
     <button type="button" class="scroll-top" id="scrollTopBtn" aria-label="Scroll back to top">
-      <span aria-hidden="true">↑</span>
+      <span aria-hidden="true">🐇</span>
     </button>
+
+    <div class="bunny-pets" aria-hidden="true">
+      <div class="bunny-pet bunny-pet--left"></div>
+      <div class="bunny-pet bunny-pet--right"></div>
+    </div>
 
     <script src="js/main.js"></script>
   </body>
