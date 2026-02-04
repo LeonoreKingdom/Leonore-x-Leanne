@@ -397,7 +397,9 @@ function markTrackUnavailable(index) {
 // Initialize player
 export function initPlayer() {
   setPlaylistExpanded(isPlaylistExpanded);
-  updatePlayerUI();
+
+  // Initialize with first track and attempt autoplay
+  selectTrack(0, { autoplay: true });
 
   if (toggleBtn) {
     toggleBtn.addEventListener('click', () => {

@@ -24,6 +24,9 @@
   border-radius: 20px;
   box-shadow: 0 16px 30px rgba(92, 133, 176, 0.2);
   background: #000;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
 }
 
 .moments-video::-webkit-media-controls-panel {
