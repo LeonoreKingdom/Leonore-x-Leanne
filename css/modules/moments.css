@@ -1,0 +1,46 @@
+/* Moments section styles */
+.moments-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(20px, 4vw, 36px);
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.moments-text {
+  min-width: 0;
+  padding-inline: clamp(0px, 1.6vw, 20px) clamp(0px, 1.2vw, 18px);
+}
+
+.moments-media {
+  min-width: 0;
+}
+
+.moments-video {
+  width: 100%;
+  display: block;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 16px 30px rgba(92, 133, 176, 0.2);
+  background: #000;
+}
+
+.moments-video::-webkit-media-controls-panel {
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.3), rgba(245, 192, 199, 0.3));
+}
+
+@media (max-width: 900px) {
+  .moments-layout {
+    grid-template-columns: 1fr;
+  }
+  .moments-media {
+    order: -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .moments-video {
+    border-radius: 16px;
+  }
+}

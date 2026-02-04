@@ -1,0 +1,22 @@
+/* CSS Custom Properties */
+:root {
+  --pastel-lilac: #e5cdf4;
+  --pastel-blue: #bcdaf5;
+  --pastel-mint: #cfe7df;
+  --pastel-lemon: #f3f2b1;
+  --pastel-rose: #f5c0c7;
+  --accent-plum: #6f5f97;
+  --accent-blue: #5c86b1;
+  --accent-mint: #5a9d8f;
+  --accent-gold: #b6ad62;
+  --text: #4f4a5e;
+  --text-soft: #605c6f;
+  --glass: rgba(255, 255, 255, 0.26);
+  --glass-2: rgba(255, 255, 255, 0.36);
+  --shadow-soft: rgba(111, 95, 151, 0.18);
+  --shadow-strong: rgba(92, 133, 176, 0.25);
+  --shadow-rose: rgba(197, 150, 177, 0.28);
+  --gradient-rainbow: linear-gradient(120deg, var(--pastel-lilac), var(--pastel-blue), var(--pastel-mint), var(--pastel-lemon), var(--pastel-rose));
+  --side-nav-width: 280px;
+  --side-nav-width-collapsed: 88px;
+}

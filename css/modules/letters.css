@@ -1,0 +1,427 @@
+/* Love Letters section styles */
+.letters-shell {
+  background: rgba(255, 255, 255, 0.28);
+  padding: clamp(26px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 4vw, 40px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 18px 46px rgba(197, 150, 177, 0.12);
+}
+
+.letters-header {
+  display: grid;
+  gap: 12px;
+  text-align: center;
+}
+
+.letters-header h2 {
+  font-family: 'Sacramento', cursive;
+  font-size: clamp(2.4rem, 6vw, 3.2rem);
+  color: var(--accent-plum);
+}
+
+.letters-header p {
+  margin: 0 auto;
+  max-width: 540px;
+  font-weight: 500;
+}
+
+.letter-gallery {
+  display: grid;
+  gap: clamp(18px, 3vw, 28px);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .letter-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .letter-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .letter-gallery {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.love-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  padding: 24px 20px 28px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  box-shadow: 0 18px 36px rgba(92, 133, 176, 0.12);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    outline 0.25s ease;
+  cursor: pointer;
+}
+
+.love-card::before,
+.love-card::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
+  z-index: 0;
+}
+
+.love-card::before {
+  width: 180px;
+  height: 180px;
+  top: -80px;
+  right: -60px;
+}
+
+.love-card::after {
+  width: 140px;
+  height: 140px;
+  bottom: -60px;
+  left: -40px;
+}
+
+.love-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 24px 40px rgba(92, 133, 176, 0.25);
+}
+
+.love-card:focus-visible {
+  outline: 3px solid rgba(111, 95, 151, 0.65);
+  outline-offset: 4px;
+  transform: translateY(-4px) scale(1.01);
+}
+
+.love-card--upcoming {
+  cursor: default;
+}
+
+.love-card--upcoming:hover,
+.love-card--upcoming:focus-visible {
+  transform: none;
+  box-shadow: 0 18px 36px rgba(92, 133, 176, 0.12);
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .love-card {
+    padding: 22px 18px 24px;
+  }
+}
+
+.love-card__ring {
+  position: relative;
+  z-index: 1;
+  width: min(140px, 60%);
+  margin: 0 auto 14px;
+  filter: drop-shadow(0 14px 24px rgba(111, 95, 151, 0.28));
+}
+
+.love-card__ring img {
+  width: 100%;
+  display: block;
+}
+
+.love-card__meta {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 6px;
+}
+
+.love-card__title {
+  font-weight: 700;
+  color: var(--accent-plum);
+  letter-spacing: 0.5px;
+}
+
+.love-card__subtitle {
+  font-size: 0.92rem;
+  opacity: 0.8;
+}
+
+.love-card--upcoming .love-card__subtitle {
+  font-style: italic;
+}
+
+.love-card__button {
+  position: relative;
+  z-index: 1;
+  margin: 12px auto 0;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: white;
+  background: linear-gradient(120deg, #d8c9f4, #bcdaf5, #cfe7df);
+  box-shadow: 0 12px 26px rgba(92, 133, 176, 0.28);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.love-card__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(92, 133, 176, 0.32);
+}
+
+/* Love Lightbox */
+.love-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(229, 205, 244, 0.32);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(20px, 4vw, 40px);
+  z-index: 3000;
+}
+
+.love-lightbox.is-visible {
+  display: flex;
+}
+
+.love-lightbox__content {
+  position: relative;
+  max-width: min(90vw, 760px);
+  width: 100%;
+  border-radius: 28px;
+  padding: clamp(20px, 3vw, 32px);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(229, 205, 244, 0.92));
+  box-shadow: 0 35px 70px var(--shadow-rose);
+  display: grid;
+  gap: clamp(14px, 3vw, 22px);
+}
+
+.love-lightbox__viewer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.love-lightbox__stage {
+  position: relative;
+  width: 100%;
+  max-height: min(70vh, 540px);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(188, 218, 245, 0.68));
+  box-shadow: inset 0 0 18px rgba(188, 218, 245, 0.28);
+  cursor: zoom-in;
+  touch-action: none;
+}
+
+.love-lightbox__stage.is-zoomed {
+  cursor: grab;
+}
+
+.love-lightbox__stage.is-zoomed.is-grabbing {
+  cursor: grabbing;
+}
+
+.love-lightbox__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(140deg, var(--pastel-lilac), var(--pastel-rose));
+  box-shadow: 0 10px 24px var(--shadow-soft);
+  cursor:
+    url('../images/Cursor/rabbit10.ani') 8 8,
+    url('../images/heart_cursor.svg') 8 8,
+    pointer;
+}
+
+.love-lightbox__close::before,
+.love-lightbox__close::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 20px;
+  height: 2px;
+  background: white;
+  border-radius: 999px;
+}
+
+.love-lightbox__close::before {
+  transform: rotate(45deg);
+}
+
+.love-lightbox__close::after {
+  transform: rotate(-45deg);
+}
+
+.love-lightbox__image {
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+  display: block;
+  box-shadow: 0 20px 35px rgba(92, 133, 176, 0.2);
+  transform-origin: center;
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.love-lightbox__image.is-zoomed {
+  filter: drop-shadow(0 18px 32px rgba(92, 133, 176, 0.25));
+}
+
+.love-lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(40px, 6vw, 54px);
+  height: clamp(40px, 6vw, 54px);
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(160deg, rgba(188, 218, 245, 0.95), rgba(207, 231, 223, 0.95), rgba(245, 192, 199, 0.95));
+  box-shadow: 0 14px 28px var(--shadow-strong);
+  cursor:
+    url('../images/Cursor/rabbit10.ani') 8 8,
+    url('../images/heart_cursor.svg') 8 8,
+    pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.love-lightbox__nav::before {
+  content: '‹';
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: white;
+  line-height: 1;
+}
+
+.love-lightbox__nav--prev {
+  left: clamp(6px, 2vw, 20px);
+}
+
+.love-lightbox__nav--prev::before {
+  transform: rotate(0deg);
+}
+
+.love-lightbox__nav--next {
+  right: clamp(6px, 2vw, 20px);
+}
+
+.love-lightbox__nav--next::before {
+  content: '›';
+}
+
+.love-lightbox__nav:hover {
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 18px 36px rgba(92, 133, 176, 0.3);
+  background: linear-gradient(160deg, rgba(188, 218, 245, 1), rgba(207, 231, 223, 1), rgba(245, 192, 199, 1));
+}
+
+.love-lightbox__nav:focus-visible {
+  outline: 3px solid rgba(111, 95, 151, 0.55);
+  outline-offset: 3px;
+}
+
+.love-lightbox__nav:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.love-lightbox__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: -4px;
+}
+
+.love-lightbox__zoom {
+  width: clamp(42px, 6vw, 54px);
+  height: clamp(42px, 6vw, 54px);
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(160deg, rgba(188, 218, 245, 0.9), rgba(207, 231, 223, 0.9), rgba(245, 192, 199, 0.9));
+  color: #fff;
+  font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 28px var(--shadow-strong);
+  cursor:
+    url('../images/Cursor/rabbit10.ani') 8 8,
+    url('../images/heart_cursor.svg') 8 8,
+    pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.love-lightbox__zoom:hover:not(:disabled) {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 16px 32px rgba(92, 133, 176, 0.3);
+  background: linear-gradient(160deg, rgba(188, 218, 245, 0.98), rgba(207, 231, 223, 0.98), rgba(245, 192, 199, 0.98));
+}
+
+.love-lightbox__zoom:focus-visible {
+  outline: 3px solid rgba(111, 95, 151, 0.55);
+  outline-offset: 3px;
+}
+
+.love-lightbox__zoom:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.love-lightbox--photo .love-lightbox__content {
+  max-width: min(90vw, 640px);
+  padding: clamp(18px, 3vw, 28px);
+}
+
+.love-lightbox--photo .love-lightbox__viewer {
+  gap: clamp(12px, 2.5vw, 20px);
+}
+
+.love-lightbox--photo .love-lightbox__stage {
+  cursor: default;
+  touch-action: auto;
+  max-height: min(80vh, 720px);
+}
+
+.love-lightbox--photo .love-lightbox__image {
+  width: 100%;
+  height: auto;
+  max-height: min(85vh, 700px);
+  object-fit: contain;
+  background: #fff;
+}
+
+.love-lightbox__caption {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+  color: var(--accent-plum);
+}

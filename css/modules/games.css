@@ -1,0 +1,281 @@
+/* Games section styles */
+.games-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.games-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.games-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.games-tabs {
+  display: inline-flex;
+  align-self: center;
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  padding: 6px;
+  box-shadow: 0 18px 34px rgba(111, 95, 151, 0.18);
+  border: 1px solid rgba(188, 218, 245, 0.4);
+}
+
+.games-tab {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 999px;
+  color: var(--text-soft);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.games-tab.is-active {
+  background: linear-gradient(140deg, rgba(188, 218, 245, 0.9), rgba(245, 192, 199, 0.9));
+  color: var(--accent-plum);
+  transform: translateY(-1px);
+}
+
+.game-panel {
+  display: none;
+  gap: 24px;
+}
+
+.game-panel.is-active {
+  display: flex;
+}
+
+/* Tetris styles */
+.tetris-layout {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto minmax(180px, 1fr);
+  align-items: start;
+}
+
+#tetrisCanvas {
+  width: 100%;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 24px;
+  border: 1px solid rgba(188, 218, 245, 0.45);
+  box-shadow: inset 0 0 0 8px rgba(188, 218, 245, 0.18);
+}
+
+.tetris-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tetris-scoreboard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 16px 30px rgba(92, 133, 176, 0.22);
+}
+
+.tetris-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-soft);
+}
+
+.tetris-value {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-plum);
+}
+
+.tetris-controls {
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 16px 30px rgba(245, 192, 199, 0.24);
+}
+
+.tetris-controls p {
+  margin: 0 0 10px;
+  font-weight: 600;
+  color: var(--accent-plum);
+}
+
+.tetris-controls ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.tetris-start {
+  padding: 14px 18px;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(140deg, rgba(255, 214, 229, 0.95), rgba(188, 218, 245, 0.95));
+  font-weight: 600;
+  color: var(--accent-plum);
+  box-shadow: 0 18px 34px rgba(111, 95, 151, 0.2);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.tetris-start:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 36px rgba(111, 95, 151, 0.26);
+}
+
+/* Chess styles */
+.chess-layout {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(240px, 360px) minmax(200px, 1fr);
+  align-items: start;
+}
+
+.chess-board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 22px 40px rgba(92, 133, 176, 0.24);
+  border: 1px solid rgba(188, 218, 245, 0.45);
+}
+
+.chess-cell {
+  position: relative;
+  padding-top: 100%;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease;
+}
+
+.chess-cell span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.chess-cell.is-light {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.chess-cell.is-dark {
+  background: rgba(188, 218, 245, 0.65);
+}
+
+.chess-cell.is-highlight::after {
+  content: '';
+  position: absolute;
+  inset: 12%;
+  border-radius: 16px;
+  background: rgba(245, 192, 199, 0.45);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.chess-cell.is-move::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(111, 95, 151, 0.75);
+  box-shadow: 0 0 0 6px rgba(111, 95, 151, 0.18);
+}
+
+.chess-cell button {
+  position: absolute;
+  inset: 0;
+  border: none;
+  background: none;
+}
+
+.chess-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chess-status,
+.chess-scoreboard {
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 34px rgba(111, 95, 151, 0.2);
+}
+
+.chess-status h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: var(--accent-plum);
+}
+
+.chess-scoreboard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.chess-label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-soft);
+}
+
+.chess-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-plum);
+}
+
+.chess-restart {
+  padding: 14px 18px;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(140deg, rgba(188, 218, 245, 0.92), rgba(255, 214, 229, 0.92));
+  font-weight: 600;
+  color: var(--accent-plum);
+  box-shadow: 0 18px 34px rgba(92, 133, 176, 0.22);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.chess-restart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 38px rgba(92, 133, 176, 0.28);
+}
+
+@media (max-width: 860px) {
+  .tetris-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .chess-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .games-tabs {
+    flex-direction: column;
+    border-radius: 24px;
+  }
+}

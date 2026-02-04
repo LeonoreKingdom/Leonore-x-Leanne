@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -97,21 +97,10 @@
             <div class="moments-layout">
               <div class="moments-text">
                 <h2>Our Moments</h2>
-                <p style="margin-top: 6px">
-                  Press play and relive the smiles, laughter, and quiet glances that tell our story better than any words ever could. This little film is a love letter in motion just for us. ♡
-                </p>
+                <p style="margin-top: 6px">Press play and relive the smiles, laughter, and quiet glances that tell our story better than any words ever could. This little film is a love letter in motion just for us. ♡</p>
               </div>
               <div class="moments-media">
-                <video
-                  class="moments-video"
-                  id="momentsVideo"
-                  controls
-                  preload="none"
-                  playsinline
-                  data-src="videos/hero.mp4"
-                >
-                  Your browser does not support the video tag.
-                </video>
+                <video class="moments-video" id="momentsVideo" controls preload="none" playsinline data-src="videos/hero.mp4">Your browser does not support the video tag.</video>
               </div>
             </div>
           </div>
@@ -157,18 +146,12 @@
             <div class="games-shell card">
               <div class="games-header">
                 <h2>Playful Mini Games</h2>
-                <p>
-                  Take a break together — challenge each other at pixel hearts Tetris or a cozy chess match. Your best runs are saved locally so we can celebrate every little victory.
-                </p>
+                <p>Take a break together — challenge each other at pixel hearts Tetris or a cozy chess match. Your best runs are saved locally so we can celebrate every little victory.</p>
               </div>
               <div class="games-body">
                 <div class="games-tabs" role="tablist" aria-label="Mini game selector">
-                  <button type="button" class="games-tab is-active" data-game="tetris" role="tab" aria-selected="true" aria-controls="tetrisPanel" id="tetrisTab">
-                    🧩 Tetris Duo
-                  </button>
-                  <button type="button" class="games-tab" data-game="chess" role="tab" aria-selected="false" aria-controls="chessPanel" id="chessTab">
-                    ♟️ Chess Lounge
-                  </button>
+                  <button type="button" class="games-tab is-active" data-game="tetris" role="tab" aria-selected="true" aria-controls="tetrisPanel" id="tetrisTab">🧩 Tetris Duo</button>
+                  <button type="button" class="games-tab" data-game="chess" role="tab" aria-selected="false" aria-controls="chessPanel" id="chessTab">♟️ Chess Lounge</button>
                 </div>
                 <div class="games-panels">
                   <div class="game-panel is-active" data-game-panel="tetris" role="tabpanel" id="tetrisPanel" aria-labelledby="tetrisTab">
@@ -282,6 +265,6 @@
       <div class="bunny-pet bunny-pet--right"></div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,83 @@
+/* Gallery styles */
+.gallery-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery-header {
+  text-align: center;
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: clamp(16px, 3vw, 24px);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.gallery-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor:
+    url('../images/Cursor/rabbit10.ani') 8 8,
+    url('../images/heart_cursor.svg') 8 8,
+    pointer;
+}
+
+.gallery-card:focus-visible {
+  outline: 3px solid rgba(111, 95, 151, 0.65);
+  outline-offset: 6px;
+  border-radius: 18px;
+}
+
+.gallery-card__media {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 16px 38px rgba(92, 133, 176, 0.22);
+  aspect-ratio: 4 / 5;
+  display: flex;
+}
+
+.gallery-card__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0) 40%, rgba(245, 192, 199, 0.4));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-card:hover .gallery-card__media::after,
+.gallery-card:focus-visible .gallery-card__media::after {
+  opacity: 1;
+}
+
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-card__label {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text);
+  padding-inline: 4px;
+}
+
+.gallery-card__label span {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  margin-top: 4px;
+}
