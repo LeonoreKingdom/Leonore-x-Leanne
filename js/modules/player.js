@@ -12,6 +12,9 @@ const nextBtn = document.getElementById('nextTrack');
 const playlistEl = document.getElementById('playlist');
 const playlistToggleBtn = document.getElementById('playlistToggle');
 const playlistPanelEl = document.getElementById('playlistPanel');
+const musicWidget = document.querySelector('.music-widget');
+const musicWidgetTrigger = document.getElementById('musicWidgetTrigger');
+const closePlayerBtn = document.getElementById('closePlayer');
 
 // State
 let isPlaying = false;
@@ -269,6 +272,9 @@ function updatePlayerUI({ refreshPlaylist = true } = {}) {
   if (playerEl) {
     playerEl.classList.toggle('is-playing', isPlaying);
   }
+  if (musicWidget) {
+    musicWidget.classList.toggle('is-playing', isPlaying);
+  }
   if (refreshPlaylist) {
     renderPlaylist({ preserveScroll: true, preserveFocus: true });
   }
@@ -454,6 +460,18 @@ export function initPlayer() {
   if (playlistToggleBtn) {
     playlistToggleBtn.addEventListener('click', () => {
       setPlaylistExpanded(!isPlaylistExpanded);
+    });
+  }
+
+  if (musicWidgetTrigger) {
+    musicWidgetTrigger.addEventListener('click', () => {
+      musicWidget?.classList.add('is-open');
+    });
+  }
+
+  if (closePlayerBtn) {
+    closePlayerBtn.addEventListener('click', () => {
+      musicWidget?.classList.remove('is-open');
     });
   }
 }

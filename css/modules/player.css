@@ -1,25 +1,132 @@
-/* Music Player styles */
+/* Music Player Widget & Styles */
+
+.music-widget {
+  position: fixed;
+  bottom: clamp(20px, 4vw, 32px);
+  right: clamp(20px, 4vw, 32px);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none; /* Let clicks pass through around it */
+}
+
+/* Floating Trigger Button */
+.music-widget__trigger {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #ff9ebb, #ff7ea5);
+  box-shadow: 0 10px 30px rgba(255, 126, 165, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor:
+    url('../images/Cursor/rabbit10.ani') 8 8,
+    url('../images/heart_cursor.svg') 8 8,
+    pointer;
+  pointer-events: auto;
+  transition:
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
+  z-index: 2;
+}
+
+.music-widget__trigger:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 14px 40px rgba(255, 126, 165, 0.5);
+}
+
+.music-widget__icon {
+  font-size: 28px;
+  filter: drop-shadow(0 2px 4px rgba(200, 50, 80, 0.2));
+  animation: float-note 3s ease-in-out infinite;
+  display: block;
+}
+
+/* Player Container (Popup) */
 .player {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 340px;
+  max-width: calc(100vw - 40px);
+  padding: 24px;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(255, 245, 250, 0.92));
+  box-shadow: 0 24px 60px rgba(111, 95, 151, 0.25);
+  backdrop-filter: blur(12px);
+
+  /* Hidden state */
+  opacity: 0;
+  transform: scale(0.8) translateY(40px);
+  transform-origin: bottom right;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    transform 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
-  padding: 24px;
-  border-radius: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.4), rgba(255, 245, 250, 0.3));
-  box-shadow: 0 16px 40px rgba(111, 95, 151, 0.12);
-  transition:
-    box-shadow 0.25s ease,
-    transform 0.25s ease;
-  backdrop-filter: blur(12px);
 }
 
-.player:hover,
-.player:focus-within {
-  box-shadow: 0 24px 52px rgba(111, 95, 151, 0.18);
-  transform: translateY(-2px);
+/* Open State */
+.music-widget.is-open .player {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  visibility: visible;
+  pointer-events: auto;
 }
+
+.music-widget.is-open .music-widget__trigger {
+  transform: scale(0.5);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Close Button */
+.player-close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: #ff7ea5;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 126, 165, 0.4);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+  z-index: 10;
+}
+
+.player-close:hover {
+  transform: scale(1.15);
+  background: #ff5e8f;
+}
+
+.player-close::after {
+  content: '×';
+  padding-bottom: 2px;
+}
+
+/* --- Inner Player Styles (reused/adjusted) --- */
 
 .player-body {
   display: grid;
@@ -100,7 +207,7 @@
   margin: 0;
   font-size: 1.05rem;
   line-height: 1.35;
-  color: #d15085; /* Pinker tone */
+  color: #d15085;
   font-weight: 700;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -331,11 +438,29 @@
   animation-play-state: paused;
 }
 
+.music-widget.is-playing .music-widget__icon {
+  animation-play-state: running;
+}
+
+.music-widget .music-widget__icon {
+  animation-play-state: paused;
+}
+
 @keyframes spin-vinyl {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes float-note {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(10deg);
   }
 }

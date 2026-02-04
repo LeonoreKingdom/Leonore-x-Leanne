@@ -55,32 +55,7 @@
       </nav>
       <div class="side-nav__spacer" aria-hidden="true"></div>
       <div class="side-nav__playlist">
-        <div class="player" id="player">
-          <div class="player-body">
-            <div class="player-art" aria-hidden="true">
-              <div class="player-disc"></div>
-              <div class="player-heart"></div>
-            </div>
-            <div class="player-main">
-              <span class="player-status" id="playerStatus">Paused</span>
-              <h3 class="player-title" id="playerTitle">Your love playlist</h3>
-              <div class="player-controls">
-                <button class="player-btn" id="prevTrack" type="button" aria-label="Previous track">⏮</button>
-                <button class="player-btn player-btn--primary" id="toggleMusic" type="button" aria-label="Play or pause">Play</button>
-                <button class="player-btn" id="nextTrack" type="button" aria-label="Next track">⏭</button>
-              </div>
-            </div>
-          </div>
-          <div class="player-playlist-accordion">
-            <button class="player-list-toggle" id="playlistToggle" type="button" aria-expanded="true" aria-controls="playlistPanel">
-              <span class="player-list-header">Playlist</span>
-              <span class="player-list-toggle__icon" aria-hidden="true"></span>
-            </button>
-            <div class="player-playlist-panel" id="playlistPanel">
-              <ul class="player-playlist" id="playlist"></ul>
-            </div>
-          </div>
-        </div>
+        <!-- Player moved to floating widget -->
       </div>
     </aside>
 
@@ -263,6 +238,40 @@
     <div class="bunny-pets" aria-hidden="true">
       <div class="bunny-pet bunny-pet--left"></div>
       <div class="bunny-pet bunny-pet--right"></div>
+    </div>
+
+    <!-- Music Player Widget -->
+    <div class="music-widget">
+      <button id="musicWidgetTrigger" class="music-widget__trigger" aria-label="Open music player" type="button">
+        <span class="music-widget__icon">🎵</span>
+      </button>
+      <div class="player" id="player" aria-hidden="true">
+        <button id="closePlayer" class="player-close" aria-label="Minimize player" type="button"></button>
+        <div class="player-body">
+          <div class="player-art" aria-hidden="true">
+            <div class="player-disc"></div>
+            <div class="player-heart"></div>
+          </div>
+          <div class="player-main">
+            <span class="player-status" id="playerStatus">Paused</span>
+            <h3 class="player-title" id="playerTitle">Your love playlist</h3>
+            <div class="player-controls">
+              <button class="player-btn" id="prevTrack" type="button" aria-label="Previous track">⏮</button>
+              <button class="player-btn player-btn--primary" id="toggleMusic" type="button" aria-label="Play or pause">Play</button>
+              <button class="player-btn" id="nextTrack" type="button" aria-label="Next track">⏭</button>
+            </div>
+          </div>
+        </div>
+        <div class="player-playlist-accordion">
+          <button class="player-list-toggle" id="playlistToggle" type="button" aria-expanded="true" aria-controls="playlistPanel">
+            <span class="player-list-header">Playlist</span>
+            <span class="player-list-toggle__icon" aria-hidden="true"></span>
+          </button>
+          <div class="player-playlist-panel" id="playlistPanel">
+            <ul class="player-playlist" id="playlist"></ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="js/main.js"></script>
