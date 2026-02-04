@@ -27,8 +27,8 @@
   background: none;
   text-align: left;
   cursor:
-    url('../images/Cursor/rabbit10.ani') 8 8,
-    url('../images/heart_cursor.svg') 8 8,
+    url('../../images/Cursor/rabbit10.ani') 8 8,
+    url('../../images/heart_cursor.svg') 8 8,
     pointer;
 }
 

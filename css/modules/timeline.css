@@ -45,8 +45,8 @@
     box-shadow 0.25s ease,
     border-color 0.25s ease;
   cursor:
-    url('../images/Cursor/rabbit10.ani') 8 8,
-    url('../images/heart_cursor.svg') 8 8,
+    url('../../images/Cursor/rabbit10.ani') 8 8,
+    url('../../images/heart_cursor.svg') 8 8,
     pointer;
 }
 
