@@ -17,6 +17,6 @@
   --shadow-strong: rgba(92, 133, 176, 0.25);
   --shadow-rose: rgba(197, 150, 177, 0.28);
   --gradient-rainbow: linear-gradient(120deg, var(--pastel-lilac), var(--pastel-blue), var(--pastel-mint), var(--pastel-lemon), var(--pastel-rose));
-  --side-nav-width: 280px;
+  --side-nav-width: 340px;
   --side-nav-width-collapsed: 88px;
 }
