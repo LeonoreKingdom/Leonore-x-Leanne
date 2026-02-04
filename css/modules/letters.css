@@ -244,8 +244,8 @@
   background: linear-gradient(140deg, var(--pastel-lilac), var(--pastel-rose));
   box-shadow: 0 10px 24px var(--shadow-soft);
   cursor:
-    url('../images/Cursor/rabbit10.ani') 8 8,
-    url('../images/heart_cursor.svg') 8 8,
+    url('../../images/Cursor/rabbit10.ani') 8 8,
+    url('../../images/heart_cursor.svg') 8 8,
     pointer;
 }
 
@@ -298,8 +298,8 @@
   background: linear-gradient(160deg, rgba(188, 218, 245, 0.95), rgba(207, 231, 223, 0.95), rgba(245, 192, 199, 0.95));
   box-shadow: 0 14px 28px var(--shadow-strong);
   cursor:
-    url('../images/Cursor/rabbit10.ani') 8 8,
-    url('../images/heart_cursor.svg') 8 8,
+    url('../../images/Cursor/rabbit10.ani') 8 8,
+    url('../../images/heart_cursor.svg') 8 8,
     pointer;
   display: flex;
   align-items: center;
@@ -370,8 +370,8 @@
   place-items: center;
   box-shadow: 0 12px 28px var(--shadow-strong);
   cursor:
-    url('../images/Cursor/rabbit10.ani') 8 8,
-    url('../images/heart_cursor.svg') 8 8,
+    url('../../images/Cursor/rabbit10.ani') 8 8,
+    url('../../images/heart_cursor.svg') 8 8,
     pointer;
   transition:
     transform 0.2s ease,

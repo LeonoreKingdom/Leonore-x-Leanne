@@ -138,8 +138,8 @@
     box-shadow 0.3s ease;
   z-index: 1200;
   cursor:
-    url('../images/Cursor/rabbit10.ani') 8 8,
-    url('../images/heart_cursor.svg') 8 8,
+    url('../../images/Cursor/rabbit10.ani') 8 8,
+    url('../../images/heart_cursor.svg') 8 8,
     pointer;
 }
 

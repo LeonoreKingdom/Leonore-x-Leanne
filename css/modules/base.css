@@ -29,8 +29,8 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   cursor:
-    url('../images/Cursor/rabbit10.ani') 8 8,
-    url('../images/heart_cursor.svg') 8 8,
+    url('../../images/Cursor/rabbit10.ani') 8 8,
+    url('../../images/heart_cursor.svg') 8 8,
     auto;
   scrollbar-width: thin;
   scrollbar-color: #ff9ebb rgba(255, 255, 255, 0.5);
@@ -78,8 +78,8 @@ body::before {
 a,
 button {
   cursor:
-    url('../images/Cursor/rabbit10.ani') 8 8,
-    url('../images/heart_cursor.svg') 8 8,
+    url('../../images/Cursor/rabbit10.ani') 8 8,
+    url('../../images/heart_cursor.svg') 8 8,
     pointer;
 }
 

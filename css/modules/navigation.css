@@ -67,8 +67,8 @@
   color: var(--accent-plum);
   box-shadow: 0 12px 22px rgba(92, 133, 176, 0.2);
   cursor:
-    url('../images/Cursor/rabbit10.ani') 8 8,
-    url('../images/heart_cursor.svg') 8 8,
+    url('../../images/Cursor/rabbit10.ani') 8 8,
+    url('../../images/heart_cursor.svg') 8 8,
     pointer;
   transition:
     transform 0.3s ease,
